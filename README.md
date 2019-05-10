@@ -5,7 +5,7 @@ Aplicativo iOS para criar, gerenciar e enviar enquetes via WhatsApp.
 
 Abaixo estão listados os artefatos que servirão para completar o entendimento do projeto publicado no <a href="https://medium.com/p/e4f4d6e247a8"> Medium </a>.
 
-## [00 - Mapa mental](artefacts/mindmap.md)
+## [00 - Mapa mental](artefacts/mindMap.md)
 
 ## [01 - Arquitetura]<!-- (artefacts/architecture.md) -->
 
