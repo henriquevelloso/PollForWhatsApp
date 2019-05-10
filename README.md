@@ -5,13 +5,15 @@ Aplicativo iOS para criar, gerenciar e enviar enquetes via WhatsApp.
 
 Abaixo estão listados os artefatos que servirão para completar o entendimento do projeto publicado no <a href="https://medium.com/p/e4f4d6e247a8"> Medium </a>.
 
+## [00 - Mapa mental] <!-- (artefacts/mindmap.md) -->
+
 ## [01 - Arquitetura]<!-- (artefacts/architecture.md) -->
 
 ## [02 - Project Model Canvas]<!-- (artefacts/projectModelCanvas.md) -->
 
-## [03 - Business Model Canvas](artefacts/businessModelCanvas.md)
+## [03 - Product Backlog](artefacts/productBacklog.md)
 
-## [04 - Product Backlog]<!-- (artefacts/productBacklog.md) -->
+## [04 - Business Model Canvas](artefacts/businessModelCanvas.md)
 
 ## [05 - Sprint Backlog]<!-- (artefacts/sprintBacklog.md) -->
 
