@@ -1,6 +1,6 @@
 # PollForWhatsApp
-Trabalho de Conclusão de Curso - Serviço Nacional de Aprendizagem Comercial do Rio Grande do Sul.
-Faculdade Senac - Porto Alegre
+Trabalho de Conclusão de Curso - Serviço Nacional de Aprendizagem Comercial do Rio Grande do Sul.<br>
+Faculdade Senac - Porto Alegre<br>
 Aplicativo iOS para criar, gerenciar e enviar enquetes via WhatsApp.
 
 Abaixo estão listados os artefatos que servirão para completar o entendimento do projeto publicado no <a href="https://medium.com/p/e4f4d6e247a8"> Medium </a>.
