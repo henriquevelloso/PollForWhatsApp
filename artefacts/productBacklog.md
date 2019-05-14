@@ -11,7 +11,4 @@ O critério "Prioridade de execução" foi definido levando em conta o MVP, onde
 Cada semana terá aproximadamente 27h de desenvolvimento, sendo assim, cada Sprint terá previsão de 2 semanas, ou seja, aproximadamente 54h de desenvolvimento.
 
 ## Execução das Tarefas
-O Controle de execução das tarefas foi realizado pela ferramenta <a href="https://help.github.com/en/articles/about-project-boards">Github Project Boards</a> e pode ser visualizada na Figura BACK002 ou pelo link https://github.com/henriquevelloso/PollForWhatsApp/projects/1
-
-![Preview](/images/backlog/back002.png?raw=true "Figura BACK002 — Tarefas acompanhadas através do Github Project boards")
-<h5>Fonte: Desenvolvido pelo autor do Projeto [Figura BACK002 — Tarefas acompanhadas através do Github Project boards]</h5>
+O Controle de execução das tarefas pode ser visualizado em <a href="sprintBacklog.md"><b>Sprint Backlog </b></a>.

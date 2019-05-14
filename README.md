@@ -11,9 +11,9 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [03 - Business Model Canvas](artefacts/businessModelCanvas.md)
 
-## [04 - Product Backlog](artefacts/productBacklog.md)
+## [04 - Product Backlog](artefacts/productBacklog.md) [unfinished]
 
-## [05 - Sprint Backlog]<!-- (artefacts/sprintBacklog.md) -->
+## [05 - Sprint Backlog](artefacts/sprintBacklog.md) [unfinished]
 
 ## [06 - Estórias de Usuários]<!-- (artefacts/userStories.md) -->
 
