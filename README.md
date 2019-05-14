@@ -9,11 +9,11 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [01 - Arquitetura]<!-- (artefacts/architecture.md) -->
 
-## [02 - Project Model Canvas]<!-- (artefacts/projectModelCanvas.md) -->
+## [02 - Project Model Canvas](artefacts/projectModelCanvas.md)
 
-## [03 - Product Backlog]<!-- (artefacts/productBacklog.md) -->
+## [03 - Business Model Canvas](artefacts/businessModelCanvas.md)
 
-## [04 - Business Model Canvas](artefacts/businessModelCanvas.md)
+## [04 - Product Backlog]<!-- (artefacts/productBacklog.md) -->
 
 ## [05 - Sprint Backlog]<!-- (artefacts/sprintBacklog.md) -->
 
