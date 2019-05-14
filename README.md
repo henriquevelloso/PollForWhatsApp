@@ -7,11 +7,11 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [01 - Mapa mental](artefacts/mindMap.md)
 
-## [02 - Project Model Canvas](artefacts/projectModelCanvas.md)
+## [02 - Project Model Canvas](artefacts/projectModelCanvas.md) [unfinished]
 
 ## [03 - Business Model Canvas](artefacts/businessModelCanvas.md)
 
-## [04 - Product Backlog]<!-- (artefacts/productBacklog.md) -->
+## [04 - Product Backlog](artefacts/productBacklog.md)
 
 ## [05 - Sprint Backlog]<!-- (artefacts/sprintBacklog.md) -->
 
