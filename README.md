@@ -19,7 +19,7 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [07 - Wireframes]<!-- (artefacts/wireframes.md) -->
 
-## [08 - Arquitetura]<!-- (artefacts/architecture.md) -->
+## [08 - Arquitetura](artefacts/architecture.md)
 
 ## [09 - Estrutura do Banco de Dados]<!-- (artefacts/databaseArchitecture.md) -->
 
