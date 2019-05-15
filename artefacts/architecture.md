@@ -6,7 +6,7 @@ O modelo de arquitetura adotado para este projeto foi o Model-View-ViewModel, ou
 
 ![Preview](/images/architecture/mvvm.png?raw=true "")
 ***Fonte: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel***
-
+ 
 **Model**<br>
 A camada model no MVVM refere-se a camada de dados, representa o conteúdo e pode possuir regras de negócio.
 
