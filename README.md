@@ -7,22 +7,24 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [01 - Mapa mental](artefacts/mindMap.md)
 
-## [02 - Project Model Canvas](artefacts/projectModelCanvas.md)
+## [02 - Visão do Produto](artefacts/productVision.md)
 
-## [03 - Business Model Canvas](artefacts/businessModelCanvas.md) [Doing]
+## [03 - Project Model Canvas](artefacts/projectModelCanvas.md)
 
-## [04 - Product Backlog](artefacts/productBacklog.md) [Doing]
+## [04 - Business Model Canvas](artefacts/businessModelCanvas.md) [Doing]
 
-## [05 - Sprint Backlog](artefacts/sprintBacklog.md) [Doing]
+## [05 - Product Backlog](artefacts/productBacklog.md) [Doing]
 
-## [06 - Estórias de Usuários]<!-- (artefacts/userStories.md) -->
+## [06 - Sprint Backlog](artefacts/sprintBacklog.md) [Doing]
 
-## [07 - Wireframes]<!-- (artefacts/wireframes.md) -->
+## [07 - Estórias de Usuários]<!-- (artefacts/userStories.md) -->
 
-## [08 - Arquitetura](artefacts/architecture.md)
+## [08 - Wireframes]<!-- (artefacts/wireframes.md) -->
 
-## [09 - Estrutura do Banco de Dados]<!-- (artefacts/databaseArchitecture.md) -->
+## [09 - Arquitetura](artefacts/architecture.md) [Doing]
 
-## [10 - Funcionalidades]<!-- (artefacts/mainFeatures.md) -->
+## [10 - Estrutura do Banco de Dados]<!-- (artefacts/databaseArchitecture.md) -->
 
-## [11 - Validação]<!-- (artefacts/validation.md) -->
+## [11 - Funcionalidades]<!-- (artefacts/mainFeatures.md) -->
+
+## [12 - Validação]<!-- (artefacts/validation.md) -->
