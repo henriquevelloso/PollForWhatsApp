@@ -7,13 +7,13 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [01 - Mapa mental](artefacts/mindMap.md)
 
-## [02 - Project Model Canvas](artefacts/projectModelCanvas.md) [unfinished]
+## [02 - Project Model Canvas](artefacts/projectModelCanvas.md) [Doing]
 
 ## [03 - Business Model Canvas](artefacts/businessModelCanvas.md)
 
-## [04 - Product Backlog](artefacts/productBacklog.md) [unfinished]
+## [04 - Product Backlog](artefacts/productBacklog.md) [Doing]
 
-## [05 - Sprint Backlog](artefacts/sprintBacklog.md) [unfinished]
+## [05 - Sprint Backlog](artefacts/sprintBacklog.md) [Doing]
 
 ## [06 - Estórias de Usuários]<!-- (artefacts/userStories.md) -->
 
