@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKJ-mH-M70">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamProBold.ttf">
+            <string>GothamPro-Bold</string>
+        </array>
+        <array key="GothamProMedium.ttf">
+            <string>GothamPro-Medium</string>
+        </array>
+        <array key="GothamProRegular.ttf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="lvC-3D-eZP">
+            <objects>
+                <viewController id="zNj-GX-B8i" customClass="LoginViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jdg-Lu-qR4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_ipad" translatesAutoresizingMaskIntoConstraints="NO" id="G8F-Sj-kB3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-Nl-7sY" userLabel="Login">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="tgT-Vm-NMP">
+                                        <rect key="frame" x="110" y="65" width="194" height="194"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tgT-Vm-NMP" secondAttribute="height" multiplier="1:1" id="r6Z-TA-yR9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell a secret, send a message to any WhatsApp number ANONYMOUSLY." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvF-Rv-gvI">
+                                        <rect key="frame" x="20" y="724" width="374" height="38"/>
+                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHh-OE-SWR" customClass="TrueUIButton" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="782" width="354" height="55"/>
+                                        <color key="backgroundColor" red="0.51219671964645386" green="0.31933388113975525" blue="0.99155062437057495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="pFJ-ch-rxz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="LOGIN"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                                <color key="value" red="0.4392156862745098" green="0.30196078431372547" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                                <color key="value" red="0.50980392156862742" green="0.32156862745098036" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToPhoneViewController:" destination="zNj-GX-B8i" eventType="touchUpInside" id="COl-q4-7z4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rHh-OE-SWR" secondAttribute="bottom" constant="25" id="7Jj-GW-bZd"/>
+                                    <constraint firstItem="rHh-OE-SWR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qNh-Nl-7sY" secondAttribute="leading" constant="30" id="OVK-rX-eJs"/>
+                                    <constraint firstItem="rHh-OE-SWR" firstAttribute="top" secondItem="jvF-Rv-gvI" secondAttribute="bottom" constant="20" id="Tox-hv-dnw"/>
+                                    <constraint firstItem="jvF-Rv-gvI" firstAttribute="centerX" secondItem="qNh-Nl-7sY" secondAttribute="centerX" id="TxK-ze-zK3"/>
+                                    <constraint firstItem="jvF-Rv-gvI" firstAttribute="width" secondItem="qNh-Nl-7sY" secondAttribute="width" multiplier="0.9" constant="1" id="VwJ-vV-L7h"/>
+                                    <constraint firstItem="tgT-Vm-NMP" firstAttribute="top" secondItem="qNh-Nl-7sY" secondAttribute="top" constant="65" id="YL8-Ca-dio"/>
+                                    <constraint firstAttribute="trailing" secondItem="rHh-OE-SWR" secondAttribute="trailing" constant="30" id="dMT-bu-VF1"/>
+                                    <constraint firstItem="tgT-Vm-NMP" firstAttribute="centerX" secondItem="qNh-Nl-7sY" secondAttribute="centerX" id="fUp-SN-E92"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7wG-tV-IKi" firstAttribute="bottom" secondItem="qNh-Nl-7sY" secondAttribute="bottom" id="O0Q-ar-t8u"/>
+                            <constraint firstItem="qNh-Nl-7sY" firstAttribute="leading" secondItem="7wG-tV-IKi" secondAttribute="leading" id="Olv-OR-m5N"/>
+                            <constraint firstItem="G8F-Sj-kB3" firstAttribute="leading" secondItem="7wG-tV-IKi" secondAttribute="leading" id="Ry4-LV-Asv"/>
+                            <constraint firstItem="7wG-tV-IKi" firstAttribute="trailing" secondItem="qNh-Nl-7sY" secondAttribute="trailing" id="Vck-r6-g27"/>
+                            <constraint firstItem="qNh-Nl-7sY" firstAttribute="top" secondItem="Jdg-Lu-qR4" secondAttribute="top" id="dCG-Fp-3CA"/>
+                            <constraint firstItem="G8F-Sj-kB3" firstAttribute="trailing" secondItem="7wG-tV-IKi" secondAttribute="trailing" id="dlV-4d-XjD"/>
+                            <constraint firstItem="G8F-Sj-kB3" firstAttribute="top" secondItem="Jdg-Lu-qR4" secondAttribute="top" id="mje-cf-WkD"/>
+                            <constraint firstAttribute="bottom" secondItem="G8F-Sj-kB3" secondAttribute="bottom" id="wdY-4L-77b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7wG-tV-IKi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a9i-M7-joP"/>
+                    <connections>
+                        <outlet property="introdutionLabel" destination="jvF-Rv-gvI" id="p7a-hf-enP"/>
+                        <outlet property="loginButton" destination="rHh-OE-SWR" id="1yX-uw-onH"/>
+                        <segue destination="24J-oB-8fl" kind="show" identifier="goToPhoneNumber" id="RcT-t8-VCs"/>
+                        <segue destination="wVQ-QE-rCw" kind="showDetail" identifier="goToMessagesDirect" id="Kze-eF-qBm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKF-6q-jNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Vk-sh-2Ew">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKJ-mH-M70" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c0c-M6-8B3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zNj-GX-B8i" kind="relationship" relationship="rootViewController" id="JLT-eV-IQ9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyO-5V-e0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="25"/>
+        </scene>
+        <!--Phone Number View Controller-->
+        <scene sceneID="hKu-dr-E3Y">
+            <objects>
+                <viewController id="24J-oB-8fl" customClass="PhoneNumberViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1hY-jX-cxU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_ipad" translatesAutoresizingMaskIntoConstraints="NO" id="Z1Z-Iq-4y5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYW-zB-gq5" userLabel="Phone">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To log in, set your country and phone number to receive the verification code by sms." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6P-h6-phj">
+                                        <rect key="frame" x="20" y="140" width="374" height="51"/>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-K3-zFA" userLabel="form">
+                                        <rect key="frame" x="12" y="246" width="390" height="140"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZb-3t-bKL" userLabel="Country code" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="55"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoR-nJ-lMu">
+                                                        <rect key="frame" x="47" y="0.0" width="55" height="55"/>
+                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4No-3Z-6xD" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="13" width="39" height="29"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="US.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Ks-Sa-zfP" customClass="True">
+                                                                <rect key="frame" x="0.0" y="0.0" width="39" height="29"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="1Ks-Sa-zfP" secondAttribute="trailing" id="06g-E2-EbJ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="1Ks-Sa-zfP" secondAttribute="bottom" id="GEd-bS-q7z"/>
+                                                            <constraint firstItem="1Ks-Sa-zfP" firstAttribute="leading" secondItem="4No-3Z-6xD" secondAttribute="leading" id="Lji-17-LI9"/>
+                                                            <constraint firstItem="1Ks-Sa-zfP" firstAttribute="top" secondItem="4No-3Z-6xD" secondAttribute="top" id="Tv8-4r-Pva"/>
+                                                            <constraint firstAttribute="width" constant="39" id="wfY-CX-7Nd"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                <real key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.24550513698630136" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="yoR-nJ-lMu" firstAttribute="top" secondItem="LZb-3t-bKL" secondAttribute="top" id="6oa-x7-mMG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yoR-nJ-lMu" secondAttribute="trailing" constant="8" id="C08-by-ZpA"/>
+                                                    <constraint firstAttribute="height" constant="55" id="Jpt-k5-JQb"/>
+                                                    <constraint firstAttribute="width" constant="110" id="Qj0-am-gXt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yoR-nJ-lMu" secondAttribute="bottom" id="axN-YY-vEv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4No-3Z-6xD" secondAttribute="bottom" constant="13" id="dja-s4-MM4"/>
+                                                    <constraint firstItem="4No-3Z-6xD" firstAttribute="top" secondItem="LZb-3t-bKL" secondAttribute="top" constant="13" id="rxJ-ZF-D1f"/>
+                                                    <constraint firstItem="yoR-nJ-lMu" firstAttribute="leading" secondItem="4No-3Z-6xD" secondAttribute="trailing" id="sS8-nv-B0i"/>
+                                                    <constraint firstItem="4No-3Z-6xD" firstAttribute="leading" secondItem="LZb-3t-bKL" secondAttribute="leading" constant="8" id="zVp-vX-2Eh"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="gjJ-D1-sy6" appends="YES" id="XBb-a1-Lgr"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-qv-fTW" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                <rect key="frame" x="118" y="0.0" width="272" height="55"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone number" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-fB-x2J" userLabel="Account Number">
+                                                        <rect key="frame" x="0.0" y="0.0" width="272" height="55"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" textContentType="tel"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="vrr-fB-x2J" secondAttribute="bottom" id="Cb1-Zb-6RH"/>
+                                                    <constraint firstItem="vrr-fB-x2J" firstAttribute="leading" secondItem="EsM-qv-fTW" secondAttribute="leading" id="MdC-x7-1gL"/>
+                                                    <constraint firstItem="vrr-fB-x2J" firstAttribute="top" secondItem="EsM-qv-fTW" secondAttribute="top" id="R6x-tt-cm4"/>
+                                                    <constraint firstAttribute="height" constant="55" id="SVY-rG-nXS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vrr-fB-x2J" secondAttribute="trailing" id="l39-Y9-Yrf"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qge-J3-vQp" customClass="TrueUIButton" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="67" width="390" height="55"/>
+                                                <color key="backgroundColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="UC9-uq-gMR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="SEND ME THE CODE"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                        <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sendCodeTapped:" destination="24J-oB-8fl" eventType="touchUpInside" id="bna-Ax-8Yl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LZb-3t-bKL" firstAttribute="top" secondItem="bfF-K3-zFA" secondAttribute="top" id="0Sg-xq-4JB"/>
+                                            <constraint firstItem="LZb-3t-bKL" firstAttribute="leading" secondItem="bfF-K3-zFA" secondAttribute="leading" id="0TH-1t-h6p"/>
+                                            <constraint firstAttribute="height" constant="140" id="8Y3-EV-h3P"/>
+                                            <constraint firstItem="EsM-qv-fTW" firstAttribute="top" secondItem="bfF-K3-zFA" secondAttribute="top" id="8hU-Ha-beZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="EsM-qv-fTW" secondAttribute="trailing" id="RHv-Mc-TL7"/>
+                                            <constraint firstItem="qge-J3-vQp" firstAttribute="top" secondItem="LZb-3t-bKL" secondAttribute="bottom" constant="12" id="Syp-jc-Emw"/>
+                                            <constraint firstItem="EsM-qv-fTW" firstAttribute="leading" secondItem="LZb-3t-bKL" secondAttribute="trailing" constant="8" id="jP6-xk-Y2l"/>
+                                            <constraint firstAttribute="trailing" secondItem="qge-J3-vQp" secondAttribute="trailing" id="szF-MR-YxP"/>
+                                            <constraint firstItem="qge-J3-vQp" firstAttribute="leading" secondItem="bfF-K3-zFA" secondAttribute="leading" id="y8B-s7-eXr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bfF-K3-zFA" secondAttribute="trailing" constant="12" id="KSR-yX-PHR"/>
+                                    <constraint firstItem="f6P-h6-phj" firstAttribute="top" secondItem="WYW-zB-gq5" secondAttribute="top" constant="140" id="YYR-Rs-Z2W"/>
+                                    <constraint firstAttribute="trailing" secondItem="f6P-h6-phj" secondAttribute="trailing" constant="20" id="ftw-LI-mjq"/>
+                                    <constraint firstItem="f6P-h6-phj" firstAttribute="leading" secondItem="WYW-zB-gq5" secondAttribute="leading" constant="20" id="iDB-Zb-Kye"/>
+                                    <constraint firstItem="bfF-K3-zFA" firstAttribute="top" secondItem="f6P-h6-phj" secondAttribute="bottom" constant="55" id="j3F-dJ-gDs"/>
+                                    <constraint firstItem="bfF-K3-zFA" firstAttribute="leading" secondItem="WYW-zB-gq5" secondAttribute="leading" constant="12" id="lkx-tt-CYC"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-ng-osc" userLabel="loadingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-tl-lMC">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65132705479452058" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Q7t-tl-lMC" firstAttribute="centerX" secondItem="z5D-ng-osc" secondAttribute="centerX" id="fin-YS-C3l"/>
+                                    <constraint firstItem="Q7t-tl-lMC" firstAttribute="centerY" secondItem="z5D-ng-osc" secondAttribute="centerY" id="h4X-TN-DzN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11391787976026535" green="0.17622604966163635" blue="0.29003667831420898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z5D-ng-osc" firstAttribute="centerX" secondItem="1hY-jX-cxU" secondAttribute="centerX" id="1j1-Qs-Hn6"/>
+                            <constraint firstAttribute="bottom" secondItem="Z1Z-Iq-4y5" secondAttribute="bottom" id="F8R-ba-4yj"/>
+                            <constraint firstItem="WYW-zB-gq5" firstAttribute="trailing" secondItem="mFE-ft-JiL" secondAttribute="trailing" id="FPx-aU-DpD"/>
+                            <constraint firstItem="Z1Z-Iq-4y5" firstAttribute="top" secondItem="1hY-jX-cxU" secondAttribute="top" id="G6p-sN-8vn"/>
+                            <constraint firstItem="WYW-zB-gq5" firstAttribute="bottom" secondItem="mFE-ft-JiL" secondAttribute="bottom" id="LIY-OE-emb"/>
+                            <constraint firstItem="Z1Z-Iq-4y5" firstAttribute="trailing" secondItem="mFE-ft-JiL" secondAttribute="trailing" id="aiq-Tn-StF"/>
+                            <constraint firstItem="z5D-ng-osc" firstAttribute="centerY" secondItem="1hY-jX-cxU" secondAttribute="centerY" id="eSs-Dt-EGp"/>
+                            <constraint firstItem="WYW-zB-gq5" firstAttribute="top" secondItem="1hY-jX-cxU" secondAttribute="top" id="hRF-MN-mb4"/>
+                            <constraint firstItem="z5D-ng-osc" firstAttribute="height" secondItem="1hY-jX-cxU" secondAttribute="height" id="mvT-oj-lEE"/>
+                            <constraint firstItem="Z1Z-Iq-4y5" firstAttribute="leading" secondItem="mFE-ft-JiL" secondAttribute="leading" id="pH7-Ac-oQB"/>
+                            <constraint firstItem="WYW-zB-gq5" firstAttribute="leading" secondItem="mFE-ft-JiL" secondAttribute="leading" id="rQD-YJ-rRY"/>
+                            <constraint firstItem="z5D-ng-osc" firstAttribute="width" secondItem="1hY-jX-cxU" secondAttribute="width" id="vD7-PG-hsY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mFE-ft-JiL"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OuD-zN-O0r" appends="YES" id="bTj-Pw-FNa"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="raR-yO-AyQ"/>
+                    <connections>
+                        <outlet property="countryCodeLabel" destination="yoR-nJ-lMu" id="LeC-eJ-GaA"/>
+                        <outlet property="countryFlag" destination="1Ks-Sa-zfP" id="xzf-Q6-0K5"/>
+                        <outlet property="flagCountainer" destination="4No-3Z-6xD" id="hww-yY-M76"/>
+                        <outlet property="formContainer" destination="bfF-K3-zFA" id="ZRU-fg-PsZ"/>
+                        <outlet property="loadingView" destination="z5D-ng-osc" id="Rvx-yP-xxI"/>
+                        <outlet property="phoneNumberText" destination="vrr-fB-x2J" id="PzY-Pm-8CF"/>
+                        <outlet property="titleLabel" destination="f6P-h6-phj" id="A92-pc-eh2"/>
+                        <segue destination="wo4-Lq-hsb" kind="show" identifier="goToAuthentication" id="1Bq-V5-4eM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXO-uj-G40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gjJ-D1-sy6" userLabel="Country Code Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="openCountryCodePickerAction:" destination="24J-oB-8fl" id="uqj-BS-OVC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="OuD-zN-O0r" userLabel="Dismiss Keyboard Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="24J-oB-8fl" id="bGi-z2-u3T"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1289.8550724637682" y="788.83928571428567"/>
+        </scene>
+        <!--Authenticate View Controller-->
+        <scene sceneID="2bT-g7-T3b">
+            <objects>
+                <viewController id="wo4-Lq-hsb" customClass="AuthenticateViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PIw-0p-aRs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_ipad" translatesAutoresizingMaskIntoConstraints="NO" id="10E-y4-7UI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-0n-wYb" userLabel="authenticate">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOi-Kt-9vI">
+                                        <rect key="frame" x="20" y="140" width="374" height="34"/>
+                                        <string key="text">The verification code was
+send by sms to</string>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGx-a0-2HK">
+                                        <rect key="frame" x="20" y="174" width="374" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-EU-L2v" userLabel="form">
+                                        <rect key="frame" x="12" y="251.5" width="390" height="140"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-Yg-Fpy" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="55"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification code" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IXj-V9-dEZ" userLabel="Account Number">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="55"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="GothamPro-Bold" family="Gotham Pro" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" textContentType="tel"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="IXj-V9-dEZ" secondAttribute="bottom" id="7ss-xj-eqW"/>
+                                                    <constraint firstItem="IXj-V9-dEZ" firstAttribute="top" secondItem="AIw-Yg-Fpy" secondAttribute="top" id="ObR-hA-hF4"/>
+                                                    <constraint firstItem="IXj-V9-dEZ" firstAttribute="leading" secondItem="AIw-Yg-Fpy" secondAttribute="leading" id="Y5X-aX-3Gy"/>
+                                                    <constraint firstAttribute="height" constant="55" id="fR6-pY-Bqq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IXj-V9-dEZ" secondAttribute="trailing" id="qH4-xl-PPl"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfR-tu-6uf" customClass="TrueUIButton" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="67" width="390" height="55"/>
+                                                <color key="backgroundColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="yn8-Cl-NBL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="AUTHENTICATE"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                        <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="authenticateAction:" destination="wo4-Lq-hsb" eventType="touchUpInside" id="Uh8-dF-yqK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kfR-tu-6uf" firstAttribute="leading" secondItem="K9m-EU-L2v" secondAttribute="leading" id="4Jp-mm-iq8"/>
+                                            <constraint firstAttribute="trailing" secondItem="kfR-tu-6uf" secondAttribute="trailing" id="A9G-dF-zB5"/>
+                                            <constraint firstAttribute="trailing" secondItem="AIw-Yg-Fpy" secondAttribute="trailing" id="KPL-d5-anR"/>
+                                            <constraint firstItem="AIw-Yg-Fpy" firstAttribute="leading" secondItem="K9m-EU-L2v" secondAttribute="leading" id="g9O-YG-WJo"/>
+                                            <constraint firstAttribute="height" constant="140" id="kUP-kx-Owt"/>
+                                            <constraint firstItem="AIw-Yg-Fpy" firstAttribute="top" secondItem="K9m-EU-L2v" secondAttribute="top" id="kUw-Ci-SWm"/>
+                                            <constraint firstItem="kfR-tu-6uf" firstAttribute="top" secondItem="AIw-Yg-Fpy" secondAttribute="bottom" constant="12" id="x4u-xO-daf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nOi-Kt-9vI" firstAttribute="leading" secondItem="2JV-0n-wYb" secondAttribute="leading" constant="20" id="0RB-7Y-7h2"/>
+                                    <constraint firstItem="wGx-a0-2HK" firstAttribute="leading" secondItem="2JV-0n-wYb" secondAttribute="leading" constant="20" id="6f8-wR-L3Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="wGx-a0-2HK" secondAttribute="trailing" constant="20" id="Asz-SU-RYE"/>
+                                    <constraint firstItem="K9m-EU-L2v" firstAttribute="leading" secondItem="2JV-0n-wYb" secondAttribute="leading" constant="12" id="EvH-vR-4TC"/>
+                                    <constraint firstAttribute="trailing" secondItem="nOi-Kt-9vI" secondAttribute="trailing" constant="20" id="NdR-fL-ICR"/>
+                                    <constraint firstItem="wGx-a0-2HK" firstAttribute="top" secondItem="nOi-Kt-9vI" secondAttribute="bottom" id="STj-4w-ehH"/>
+                                    <constraint firstAttribute="trailing" secondItem="K9m-EU-L2v" secondAttribute="trailing" constant="12" id="neS-yo-tD5"/>
+                                    <constraint firstItem="K9m-EU-L2v" firstAttribute="top" secondItem="wGx-a0-2HK" secondAttribute="bottom" constant="55" id="qQr-hf-DTk"/>
+                                    <constraint firstItem="nOi-Kt-9vI" firstAttribute="top" secondItem="2JV-0n-wYb" secondAttribute="top" constant="140" id="zx6-sP-Nor"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkr-4U-61M" userLabel="loadingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zAQ-t7-7Wp">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64948095034246578" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="zAQ-t7-7Wp" firstAttribute="centerX" secondItem="Dkr-4U-61M" secondAttribute="centerX" id="NCq-ar-TG8"/>
+                                    <constraint firstItem="zAQ-t7-7Wp" firstAttribute="centerY" secondItem="Dkr-4U-61M" secondAttribute="centerY" id="u9b-cJ-FN1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1139178798" green="0.1762260497" blue="0.29003667830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dkr-4U-61M" firstAttribute="width" secondItem="PIw-0p-aRs" secondAttribute="width" id="5y1-CZ-aVQ"/>
+                            <constraint firstItem="10E-y4-7UI" firstAttribute="top" secondItem="PIw-0p-aRs" secondAttribute="top" id="GW3-gb-Eia"/>
+                            <constraint firstItem="Dkr-4U-61M" firstAttribute="centerX" secondItem="PIw-0p-aRs" secondAttribute="centerX" id="OVD-uK-iNv"/>
+                            <constraint firstItem="Dkr-4U-61M" firstAttribute="centerY" secondItem="PIw-0p-aRs" secondAttribute="centerY" id="Skl-f1-eZj"/>
+                            <constraint firstItem="Dkr-4U-61M" firstAttribute="height" secondItem="PIw-0p-aRs" secondAttribute="height" id="T20-RK-7zC"/>
+                            <constraint firstItem="2JV-0n-wYb" firstAttribute="top" secondItem="PIw-0p-aRs" secondAttribute="top" id="Xvy-74-YVo"/>
+                            <constraint firstItem="2JV-0n-wYb" firstAttribute="leading" secondItem="Udb-Wq-m7A" secondAttribute="leading" id="eb4-SA-Owa"/>
+                            <constraint firstItem="2JV-0n-wYb" firstAttribute="bottom" secondItem="Udb-Wq-m7A" secondAttribute="bottom" id="fL8-kS-Le7"/>
+                            <constraint firstItem="10E-y4-7UI" firstAttribute="leading" secondItem="Udb-Wq-m7A" secondAttribute="leading" id="ngn-52-QnE"/>
+                            <constraint firstItem="2JV-0n-wYb" firstAttribute="trailing" secondItem="Udb-Wq-m7A" secondAttribute="trailing" id="o2c-GL-kow"/>
+                            <constraint firstAttribute="bottom" secondItem="10E-y4-7UI" secondAttribute="bottom" id="oZ6-dE-X0R"/>
+                            <constraint firstItem="10E-y4-7UI" firstAttribute="trailing" secondItem="Udb-Wq-m7A" secondAttribute="trailing" id="sfC-os-2s1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Udb-Wq-m7A"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Dba-W2-zVK" appends="YES" id="qXK-D9-STd"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="hB4-H0-dg2"/>
+                    <connections>
+                        <outlet property="formContainer" destination="K9m-EU-L2v" id="D2f-dg-1Eq"/>
+                        <outlet property="loadingView" destination="Dkr-4U-61M" id="2qZ-6R-bEy"/>
+                        <outlet property="phoneNumberLabel" destination="wGx-a0-2HK" id="hyb-35-U0D"/>
+                        <outlet property="titleLabel" destination="nOi-Kt-9vI" id="nL1-nG-8dD"/>
+                        <outlet property="verificationCodeText" destination="IXj-V9-dEZ" id="gqc-x6-ujV"/>
+                        <segue destination="wVQ-QE-rCw" kind="showDetail" identifier="goToMessages" id="PLq-lL-nNQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZr-xc-glB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Typ-nG-nCS" userLabel="Country Code Tap Gesture Recognizer"/>
+                <tapGestureRecognizer id="Dba-W2-zVK" userLabel="Dismiss Keyboard Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="wo4-Lq-hsb" id="vnI-qt-GEQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2209" y="789"/>
+        </scene>
+        <!--NEW MESSAGE-->
+        <scene sceneID="0Bm-5h-CFR">
+            <objects>
+                <viewController id="pk8-OO-Uba" customClass="SendMessageViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2HQ-5L-XIh" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwE-9j-KHJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-F5-lo4" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="683"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-fZ-AD5" userLabel="content avoiding keyboard">
+                                                <rect key="frame" x="12" y="0.0" width="390" height="490"/>
+                                                <subviews>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3N-9y-oII" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="390" height="140"/>
+                                                        <subviews>
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBm-nK-hlx" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="390" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining messages to send" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-Em-2DM">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="35"/>
+                                                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="Vrt-Em-2DM" secondAttribute="bottom" id="M3c-6u-k4Q"/>
+                                                                    <constraint firstItem="Vrt-Em-2DM" firstAttribute="top" secondItem="hBm-nK-hlx" secondAttribute="top" id="VKo-fA-7Jw"/>
+                                                                    <constraint firstItem="Vrt-Em-2DM" firstAttribute="leading" secondItem="hBm-nK-hlx" secondAttribute="leading" id="bM0-UX-ur9"/>
+                                                                    <constraint firstAttribute="height" constant="35" id="iUT-2P-MKo"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Vrt-Em-2DM" secondAttribute="trailing" id="x6e-RK-pf1"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7wK-OQ-f3v">
+                                                                <rect key="frame" x="30" y="35" width="330" height="105"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJN-qg-Cla">
+                                                                        <rect key="frame" x="0.0" y="8" width="123.5" height="89"/>
+                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="80"/>
+                                                                        <color key="textColor" red="0.65652024745941162" green="0.4812965989112854" blue="0.9720274806022644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDv-0D-RtN" customClass="TrueUIButton" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="123.5" y="30" width="206.5" height="45"/>
+                                                                        <color key="backgroundColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="45" id="sal-T1-rgH"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="GET MORE"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                                                <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                                <real key="value" value="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="7"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                                                                <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                                                                <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                                <real key="value" value="7"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="sendCodeTapped:" destination="24J-oB-8fl" eventType="touchUpInside" id="HoN-gb-TDw"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="7wK-OQ-f3v" firstAttribute="top" secondItem="hBm-nK-hlx" secondAttribute="bottom" id="11q-Zw-oQP"/>
+                                                            <constraint firstItem="hBm-nK-hlx" firstAttribute="top" secondItem="a3N-9y-oII" secondAttribute="top" id="325-Kv-p8e"/>
+                                                            <constraint firstAttribute="trailing" secondItem="7wK-OQ-f3v" secondAttribute="trailing" constant="30" id="8Ab-Fn-nfe"/>
+                                                            <constraint firstAttribute="bottom" secondItem="7wK-OQ-f3v" secondAttribute="bottom" id="AhA-tP-Ww5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hBm-nK-hlx" secondAttribute="trailing" id="KTz-13-mxw"/>
+                                                            <constraint firstItem="7wK-OQ-f3v" firstAttribute="leading" secondItem="a3N-9y-oII" secondAttribute="leading" constant="30" id="MFM-kc-a7n"/>
+                                                            <constraint firstAttribute="height" constant="140" id="VTP-TJ-LTM"/>
+                                                            <constraint firstItem="hBm-nK-hlx" firstAttribute="leading" secondItem="a3N-9y-oII" secondAttribute="leading" id="bST-GZ-txG"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                                                <color key="value" red="0.50980392156862742" green="0.32156862745098036" blue="0.99607843137254903" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                                                <color key="value" red="0.4392156862745098" green="0.30196078431372547" blue="0.792156862745098" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4B-KR-APa" userLabel="form">
+                                                        <rect key="frame" x="0.0" y="190" width="390" height="300"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNM-5t-cnN" userLabel="Country code" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="55"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rk6-Uv-QaX">
+                                                                        <rect key="frame" x="47" y="0.0" width="55" height="55"/>
+                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VO-IF-43k" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="13" width="39" height="29"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="US.png" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-Qe-RFP" customClass="True">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="39" height="29"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="fdd-Qe-RFP" secondAttribute="trailing" id="2af-oc-mJP"/>
+                                                                            <constraint firstItem="fdd-Qe-RFP" firstAttribute="top" secondItem="7VO-IF-43k" secondAttribute="top" id="6Kr-lV-bmu"/>
+                                                                            <constraint firstItem="fdd-Qe-RFP" firstAttribute="leading" secondItem="7VO-IF-43k" secondAttribute="leading" id="Tis-6y-iGI"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="fdd-Qe-RFP" secondAttribute="bottom" id="W7a-J0-g30"/>
+                                                                            <constraint firstAttribute="width" constant="39" id="pjM-KS-mf8"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="7"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="rk6-Uv-QaX" secondAttribute="bottom" id="0pk-qq-ce9"/>
+                                                                    <constraint firstItem="rk6-Uv-QaX" firstAttribute="top" secondItem="qNM-5t-cnN" secondAttribute="top" id="2pi-BJ-3xE"/>
+                                                                    <constraint firstAttribute="width" constant="110" id="9Gq-D2-b86"/>
+                                                                    <constraint firstItem="rk6-Uv-QaX" firstAttribute="leading" secondItem="7VO-IF-43k" secondAttribute="trailing" id="YxC-B2-Kf6"/>
+                                                                    <constraint firstItem="7VO-IF-43k" firstAttribute="leading" secondItem="qNM-5t-cnN" secondAttribute="leading" constant="8" id="ab8-mx-gav"/>
+                                                                    <constraint firstItem="7VO-IF-43k" firstAttribute="top" secondItem="qNM-5t-cnN" secondAttribute="top" constant="13" id="cvz-Dt-KOl"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="7VO-IF-43k" secondAttribute="bottom" constant="13" id="dzs-hQ-bCt"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="rk6-Uv-QaX" secondAttribute="trailing" constant="8" id="gej-KG-DKa"/>
+                                                                    <constraint firstAttribute="height" constant="55" id="yw6-Hw-gaN"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="w6e-mv-k3I" appends="YES" id="bGw-nR-dbM"/>
+                                                                </connections>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4S-h6-LhG" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                <rect key="frame" x="118" y="0.0" width="272" height="55"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone number" textAlignment="center" minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="LIX-pa-Rh9" userLabel="Account Number">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="272" height="55"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" textContentType="tel"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="LIX-pa-Rh9" firstAttribute="leading" secondItem="P4S-h6-LhG" secondAttribute="leading" id="3bv-hX-9ce"/>
+                                                                    <constraint firstItem="LIX-pa-Rh9" firstAttribute="top" secondItem="P4S-h6-LhG" secondAttribute="top" id="Kiv-Od-bJZ"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="LIX-pa-Rh9" secondAttribute="trailing" id="axQ-6a-co5"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="LIX-pa-Rh9" secondAttribute="bottom" id="cE4-QC-pPf"/>
+                                                                    <constraint firstAttribute="height" constant="55" id="mPY-zg-wNb"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTB-2k-omF" customClass="TrueUIButton" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="235" width="390" height="55"/>
+                                                                <color key="backgroundColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="55" id="o5X-cQ-pSM"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="SEND MESSAGE"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                                        <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="sendMessageAction:" destination="pk8-OO-Uba" eventType="touchUpInside" id="ZEj-iF-3rk"/>
+                                                                </connections>
+                                                            </button>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uY1-lf-5vY" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="63" width="390" height="160"/>
+                                                                <subviews>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-t3-Srr">
+                                                                        <rect key="frame" x="8" y="8" width="374" height="144"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="18"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="160" id="IXx-LY-az5"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="2Qu-t3-Srr" secondAttribute="bottom" constant="8" id="fPE-cB-e5x"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="2Qu-t3-Srr" secondAttribute="trailing" constant="8" id="m2p-GF-JCT"/>
+                                                                    <constraint firstItem="2Qu-t3-Srr" firstAttribute="leading" secondItem="uY1-lf-5vY" secondAttribute="leading" constant="8" id="qaf-7p-glk"/>
+                                                                    <constraint firstItem="2Qu-t3-Srr" firstAttribute="top" secondItem="uY1-lf-5vY" secondAttribute="top" constant="8" id="tET-Up-HXN"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="uY1-lf-5vY" firstAttribute="leading" secondItem="x4B-KR-APa" secondAttribute="leading" id="8Ko-AH-eRA"/>
+                                                            <constraint firstAttribute="height" constant="300" id="Dlf-ZX-X9o"/>
+                                                            <constraint firstItem="uY1-lf-5vY" firstAttribute="top" secondItem="qNM-5t-cnN" secondAttribute="bottom" constant="8" id="TJz-bT-Joe"/>
+                                                            <constraint firstItem="P4S-h6-LhG" firstAttribute="leading" secondItem="qNM-5t-cnN" secondAttribute="trailing" constant="8" id="TeL-1W-dgx"/>
+                                                            <constraint firstItem="aTB-2k-omF" firstAttribute="top" secondItem="uY1-lf-5vY" secondAttribute="bottom" constant="12" id="UxO-Ah-yPt"/>
+                                                            <constraint firstAttribute="trailing" secondItem="P4S-h6-LhG" secondAttribute="trailing" id="bxE-pm-EGB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uY1-lf-5vY" secondAttribute="trailing" id="csS-l0-RBv"/>
+                                                            <constraint firstItem="P4S-h6-LhG" firstAttribute="top" secondItem="x4B-KR-APa" secondAttribute="top" id="gPl-6A-td1"/>
+                                                            <constraint firstItem="qNM-5t-cnN" firstAttribute="top" secondItem="x4B-KR-APa" secondAttribute="top" id="kuV-nB-Aiz"/>
+                                                            <constraint firstItem="qNM-5t-cnN" firstAttribute="leading" secondItem="x4B-KR-APa" secondAttribute="leading" id="u5G-Wg-94i"/>
+                                                            <constraint firstAttribute="trailing" secondItem="aTB-2k-omF" secondAttribute="trailing" id="ynB-Ty-43g"/>
+                                                            <constraint firstItem="aTB-2k-omF" firstAttribute="leading" secondItem="x4B-KR-APa" secondAttribute="leading" id="zCM-6Q-mIr"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="x4B-KR-APa" secondAttribute="trailing" id="C2w-Cn-OKW"/>
+                                                    <constraint firstItem="a3N-9y-oII" firstAttribute="leading" secondItem="X3U-fZ-AD5" secondAttribute="leading" id="Dnj-lk-FoE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="a3N-9y-oII" secondAttribute="trailing" id="Ra7-zm-bOL"/>
+                                                    <constraint firstItem="x4B-KR-APa" firstAttribute="leading" secondItem="X3U-fZ-AD5" secondAttribute="leading" id="cKw-UW-ZfP"/>
+                                                    <constraint firstItem="x4B-KR-APa" firstAttribute="top" secondItem="a3N-9y-oII" secondAttribute="bottom" constant="25" id="jY8-dg-f1D"/>
+                                                    <constraint firstAttribute="bottom" secondItem="x4B-KR-APa" secondAttribute="bottom" id="v1R-pj-b8b"/>
+                                                    <constraint firstItem="a3N-9y-oII" firstAttribute="top" secondItem="X3U-fZ-AD5" secondAttribute="top" constant="25" id="xkP-9J-lzW"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHx-qX-JJD">
+                                                <rect key="frame" x="12" y="490" width="390" height="168"/>
+                                                <string key="text">*Your identity or your phone number will not be sent in the message, this will be totally anonymous and sent from one of our phone numbers. Will be recorded in our database the message content, who sent the message and the phone number of destination, in total privacy. This message will be logged for security reasons only. You are fully responsible for the content you submit in the messages. Do not send messages with offensive content, we can reveal who you are to the recipient of the message. Keep this itens in mind when you are composing your anonymous message. Accept these terms so you can send your anonymous messages. Keep these items in mind when composing your message. Remember, 'GREAT POWERS COME WITH GREAT RESPONSIBILITIES.</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.23546437406440768" green="0.41460038380296399" blue="0.66771097715736039" alpha="0.73135166952054798" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="X3U-fZ-AD5" firstAttribute="top" secondItem="PYC-F5-lo4" secondAttribute="top" id="3gG-kA-4FU"/>
+                                            <constraint firstItem="X3U-fZ-AD5" firstAttribute="leading" secondItem="PYC-F5-lo4" secondAttribute="leading" constant="12" id="OFb-jN-XqO"/>
+                                            <constraint firstItem="BHx-qX-JJD" firstAttribute="top" secondItem="x4B-KR-APa" secondAttribute="bottom" id="Wxg-8k-Wp4"/>
+                                            <constraint firstAttribute="trailing" secondItem="X3U-fZ-AD5" secondAttribute="trailing" constant="12" id="lLU-gX-yAG"/>
+                                            <constraint firstAttribute="trailing" secondItem="BHx-qX-JJD" secondAttribute="trailing" constant="12" id="mVT-U7-CrD"/>
+                                            <constraint firstAttribute="bottom" secondItem="BHx-qX-JJD" secondAttribute="bottom" constant="25" id="unD-i8-4wL"/>
+                                            <constraint firstItem="BHx-qX-JJD" firstAttribute="leading" secondItem="PYC-F5-lo4" secondAttribute="leading" constant="12" id="xcV-gN-MaW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PYC-F5-lo4" firstAttribute="top" secondItem="HwE-9j-KHJ" secondAttribute="top" id="TVC-8A-E8R"/>
+                                    <constraint firstAttribute="bottom" secondItem="PYC-F5-lo4" secondAttribute="bottom" id="dJn-4V-7jS"/>
+                                    <constraint firstItem="PYC-F5-lo4" firstAttribute="leading" secondItem="HwE-9j-KHJ" secondAttribute="leading" id="lKI-Fq-xha"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYC-F5-lo4" secondAttribute="trailing" id="xed-WZ-PuO"/>
+                                </constraints>
+                            </scrollView>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdj-l8-vWk" userLabel="loadingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="AkC-6k-RHR">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="AkC-6k-RHR" firstAttribute="centerY" secondItem="qdj-l8-vWk" secondAttribute="centerY" id="FeB-Rm-KTs"/>
+                                    <constraint firstItem="AkC-6k-RHR" firstAttribute="centerX" secondItem="qdj-l8-vWk" secondAttribute="centerX" id="TFD-P4-I1t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1139178798" green="0.1762260497" blue="0.29003667830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PYC-F5-lo4" firstAttribute="width" secondItem="2HQ-5L-XIh" secondAttribute="width" id="07p-cP-vMK"/>
+                            <constraint firstItem="PYC-F5-lo4" firstAttribute="height" secondItem="2HQ-5L-XIh" secondAttribute="height" priority="250" id="44B-5o-63q"/>
+                            <constraint firstItem="qdj-l8-vWk" firstAttribute="centerX" secondItem="2HQ-5L-XIh" secondAttribute="centerX" id="4nr-Le-Bof"/>
+                            <constraint firstItem="qdj-l8-vWk" firstAttribute="centerY" secondItem="2HQ-5L-XIh" secondAttribute="centerY" id="5r8-lv-jgR"/>
+                            <constraint firstItem="qdj-l8-vWk" firstAttribute="width" secondItem="2HQ-5L-XIh" secondAttribute="width" id="8KF-Cm-k1T"/>
+                            <constraint firstItem="HwE-9j-KHJ" firstAttribute="leading" secondItem="jwl-b9-IxJ" secondAttribute="leading" id="LxT-yf-QZH"/>
+                            <constraint firstItem="HwE-9j-KHJ" firstAttribute="top" secondItem="2HQ-5L-XIh" secondAttribute="topMargin" id="SqQ-RI-P0w"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="HwE-9j-KHJ" secondAttribute="bottom" id="fym-BS-zzW"/>
+                            <constraint firstItem="qdj-l8-vWk" firstAttribute="height" secondItem="2HQ-5L-XIh" secondAttribute="height" id="n2m-27-ltS"/>
+                            <constraint firstItem="HwE-9j-KHJ" firstAttribute="trailing" secondItem="jwl-b9-IxJ" secondAttribute="trailing" id="s7L-02-aL4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jwl-b9-IxJ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                <color key="value" red="0.16838359443796072" green="0.29015186177477348" blue="0.45968829314720816" alpha="0.64948095034246578" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                <color key="value" red="0.066666666666666666" green="0.11764705882352941" blue="0.20000000000000001" alpha="0.64948095034246578" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0B5-LG-r58" appends="YES" id="kiF-hq-IMl"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="NEW MESSAGE" id="umD-KA-z6x"/>
+                    <connections>
+                        <outlet property="countryCodeLabel" destination="rk6-Uv-QaX" id="k0T-3h-XUP"/>
+                        <outlet property="countryFlag" destination="fdd-Qe-RFP" id="Vcq-Fe-roC"/>
+                        <outlet property="formContent" destination="X3U-fZ-AD5" id="Iiw-Ud-jEn"/>
+                        <outlet property="loadingView" destination="qdj-l8-vWk" id="NLS-Lo-7E9"/>
+                        <outlet property="messageText" destination="2Qu-t3-Srr" id="pKj-qp-vtn"/>
+                        <outlet property="phoneNumberText" destination="LIX-pa-Rh9" id="bOx-1c-Mbs"/>
+                        <segue destination="Cg9-LB-15z" kind="showDetail" identifier="goToLogin" id="f3G-Mu-yp9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQO-UI-aic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w6e-mv-k3I" userLabel="Country Code Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="openCountryCodePickerAction:" destination="pk8-OO-Uba" id="mo8-m5-3uE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0B5-LG-r58" userLabel="Dismiss Keyboard Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="pk8-OO-Uba" id="li9-zB-nPw"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2207.2463768115945" y="2422.7678571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pJu-qR-shX">
+            <objects>
+                <tabBarController storyboardIdentifier="MessageTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="wVQ-QE-rCw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sql-50-u4M">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.2627450980392157" green="0.38431372549019605" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8WD-Ex-Ai8" kind="relationship" relationship="viewControllers" id="bmm-eq-Ir0"/>
+                        <segue destination="4MH-z0-3EF" kind="relationship" relationship="viewControllers" id="SVS-CX-LZP"/>
+                        <segue destination="LDL-5S-u1u" kind="relationship" relationship="viewControllers" id="ALp-lJ-5Rp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCi-KM-ke8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3151" y="789"/>
+        </scene>
+        <!--NEW MESSAGE-->
+        <scene sceneID="nV4-p3-WOx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4MH-z0-3EF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="NEW MESSAGE" image="newMessageIcon" id="gHQ-x6-kyD">
+                        <inset key="imageInsets" minX="0.0" minY="-9" maxX="0.0" maxY="-9"/>
+                        <inset key="largeContentSizeImageInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZXa-Ta-2vb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pk8-OO-Uba" kind="relationship" relationship="rootViewController" id="Uju-BS-V2K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUd-OF-eqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="1629"/>
+        </scene>
+        <!--HISTORY-->
+        <scene sceneID="84h-c0-iY9">
+            <objects>
+                <viewController id="o4d-2i-Pc0" customClass="HistoryViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="11j-to-AFX" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-UB-Tc4" userLabel="loadingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pgr-gp-D3b">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Pgr-gp-D3b" firstAttribute="centerX" secondItem="VTD-UB-Tc4" secondAttribute="centerX" id="9WG-0U-hCA"/>
+                                    <constraint firstItem="Pgr-gp-D3b" firstAttribute="centerY" secondItem="VTD-UB-Tc4" secondAttribute="centerY" id="sG7-GX-d1o"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1139178798" green="0.1762260497" blue="0.29003667830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VTD-UB-Tc4" firstAttribute="width" secondItem="11j-to-AFX" secondAttribute="width" id="0GW-fL-Uef"/>
+                            <constraint firstItem="VTD-UB-Tc4" firstAttribute="centerX" secondItem="11j-to-AFX" secondAttribute="centerX" id="Rs0-K7-RrR"/>
+                            <constraint firstItem="VTD-UB-Tc4" firstAttribute="centerY" secondItem="11j-to-AFX" secondAttribute="centerY" id="VnM-y1-7LE"/>
+                            <constraint firstItem="VTD-UB-Tc4" firstAttribute="height" secondItem="11j-to-AFX" secondAttribute="height" id="mmC-bP-GI6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mS1-W3-nij"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                <color key="value" red="0.1683835944" green="0.29015186180000002" blue="0.45968829309999998" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                <color key="value" red="0.066666666669999999" green="0.1176470588" blue="0.20000000000000001" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DjG-z9-YdD" appends="YES" id="IM4-AQ-gfe"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="HISTORY" id="n1A-RK-KPs"/>
+                    <connections>
+                        <segue destination="Cg9-LB-15z" kind="showDetail" identifier="goToLogin" id="C2e-u4-t8h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNv-d6-0Dz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="iCm-5H-UzH" userLabel="Country Code Tap Gesture Recognizer"/>
+                <tapGestureRecognizer id="DjG-z9-YdD" userLabel="Dismiss Keyboard Tap Gesture Recognizer"/>
+            </objects>
+            <point key="canvasLocation" x="3151" y="2423"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="oNn-Yk-PQb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Cg9-LB-15z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uf5-lF-QYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3151" y="3121"/>
+        </scene>
+        <!--HISTORY-->
+        <scene sceneID="EtV-TO-4CM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8WD-Ex-Ai8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="HISTORY" image="historyIcon" id="OkJ-kB-adu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OEK-JD-TJT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o4d-2i-Pc0" kind="relationship" relationship="rootViewController" id="crs-sn-Zbs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qd5-67-Fbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3151" y="1629"/>
+        </scene>
+        <!--SETTINGS-->
+        <scene sceneID="Ubm-hT-eW9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LDL-5S-u1u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SETTINGS" image="settingsIcon" id="jvE-KS-xAD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MYa-GJ-D9A">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.019607843140000001" green="0.086274509799999996" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bp8-Ww-uVj" kind="relationship" relationship="rootViewController" id="9HY-Ho-anb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6S-Sn-5S0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4083" y="1629"/>
+        </scene>
+        <!--SETTINGS-->
+        <scene sceneID="cGn-MQ-MSa">
+            <objects>
+                <viewController id="bp8-Ww-uVj" customClass="SettingsViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbU-jz-d4j" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXm-W0-E2E" userLabel="loadingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bHb-gK-mOP">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="bHb-gK-mOP" firstAttribute="centerX" secondItem="aXm-W0-E2E" secondAttribute="centerX" id="8hb-xO-kOU"/>
+                                    <constraint firstItem="bHb-gK-mOP" firstAttribute="centerY" secondItem="aXm-W0-E2E" secondAttribute="centerY" id="cot-ad-LCl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1139178798" green="0.1762260497" blue="0.29003667830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aXm-W0-E2E" firstAttribute="width" secondItem="mbU-jz-d4j" secondAttribute="width" id="3cl-qC-dxE"/>
+                            <constraint firstItem="aXm-W0-E2E" firstAttribute="centerY" secondItem="mbU-jz-d4j" secondAttribute="centerY" id="42J-ge-UL5"/>
+                            <constraint firstItem="aXm-W0-E2E" firstAttribute="height" secondItem="mbU-jz-d4j" secondAttribute="height" id="nr4-G3-1Kt"/>
+                            <constraint firstItem="aXm-W0-E2E" firstAttribute="centerX" secondItem="mbU-jz-d4j" secondAttribute="centerX" id="q3F-xJ-1SK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zsu-Qx-BKC"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                <color key="value" red="0.16862745098039217" green="0.29019607843137252" blue="0.45882352941176469" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                <color key="value" red="0.066666666669999999" green="0.1176470588" blue="0.20000000000000001" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uJb-9g-A5T" appends="YES" id="HNA-Mf-ghu"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="SETTINGS" id="pYB-8w-lWK"/>
+                    <connections>
+                        <segue destination="Cg9-LB-15z" kind="showDetail" identifier="goToLogin" id="Ydf-wY-o8H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5tq-Kb-9DU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zLm-Yl-RBE" userLabel="Country Code Tap Gesture Recognizer"/>
+                <tapGestureRecognizer id="uJb-9g-A5T" userLabel="Dismiss Keyboard Tap Gesture Recognizer"/>
+            </objects>
+            <point key="canvasLocation" x="4083" y="2423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="US.png" width="40" height="30"/>
+        <image name="historyIcon" width="30" height="30"/>
+        <image name="launch_screen_ipad" width="653" height="812"/>
+        <image name="logo" width="194" height="130"/>
+        <image name="newMessageIcon" width="31" height="29"/>
+        <image name="settingsIcon" width="24" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="f3G-Mu-yp9"/>
+        <segue reference="PLq-lL-nNQ"/>
+    </inferredMetricsTieBreakers>
+</document>

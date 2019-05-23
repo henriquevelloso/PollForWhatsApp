@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_ipad" translatesAutoresizingMaskIntoConstraints="NO" id="Xx9-Qk-tWu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ks2-Ig-VbQ">
+                                <rect key="frame" x="90.666666666666686" y="65" width="194" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ks2-Ig-VbQ" secondAttribute="height" multiplier="1:1" id="ap4-DF-GF6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ks2-Ig-VbQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="65" id="2oW-tb-sKV"/>
+                            <constraint firstItem="Xx9-Qk-tWu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cSD-9r-7EY"/>
+                            <constraint firstAttribute="bottom" secondItem="Xx9-Qk-tWu" secondAttribute="bottom" id="eIp-1g-Tnp"/>
+                            <constraint firstItem="Xx9-Qk-tWu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nf1-ti-mpA"/>
+                            <constraint firstItem="ks2-Ig-VbQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="slm-Xw-xNa"/>
+                            <constraint firstItem="Xx9-Qk-tWu" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="t3f-ey-Elc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch_screen_ipad" width="653" height="812"/>
+        <image name="logo" width="194" height="130"/>
+    </resources>
+</document>
