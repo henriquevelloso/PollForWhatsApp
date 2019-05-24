@@ -73,18 +73,18 @@ class SendMessageViewController: UIViewController {
         
         messageText.delegate = self
         placeholderLabel = UILabel()
-        placeholderLabel.text = "Enter your message"
+        placeholderLabel.text = "Poll title"
         placeholderLabel.font = phoneNumberText.font
         placeholderLabel.sizeToFit()
         messageText.addSubview(placeholderLabel)
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (messageText.font?.pointSize)! / 2)
-        placeholderLabel.textColor = UIColor(red: 51.0/255.0, green: 80.0/255.0, blue: 128.0/255.0, alpha: 0.5)
+        placeholderLabel.textColor = UIColor(red: 118.0/255.0, green: 132.0/255.0, blue: 159.0/255.0, alpha: 0.7)
         placeholderLabel.isHidden = !messageText.text.isEmpty
     }
     
     func phoneNumberConfig() {
         
-        let color = UIColor(red: 51.0/255.0, green: 80.0/255.0, blue: 128.0/255.0, alpha: 0.5)
+        let color = UIColor(red: 118.0/255.0, green: 132.0/255.0, blue: 159.0/255.0, alpha: 0.7)
         self.phoneNumberText.attributedPlaceholder = NSAttributedString(string: self.phoneNumberText.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: color])
         self.phoneNumberText.autocorrectionType = .no
         self.phoneNumberText.delegate = self
@@ -118,14 +118,14 @@ class SendMessageViewController: UIViewController {
                 .normal(""),
                 .header1("Poll for WhatsApp Policy Terms."),
                 .header2("Accept this standard policies and terms for use this service"),
-                .list("Your identity or your phone number will not be sent in the message, this will be totally anonymous and sent from one of our phone numbers."),
+                .list("Your identity or your phone number will be sent in the message, this will be sent from one of our phone numbers."),
                 .list("Will be recorded in our database the message content, who sent the message and the phone number of destination, in total privacy."),
                 .list("This message will be logged for security reasons only. "),
                 
                 .list("You are fully responsible for the content you submit in the messages."),
                 .list("Do not send messages with offensive content, we can reveal who you are to the recipient of the message."),
                 .list("Keep this itens in mind when you are composing your anonymous message."),
-                .normal("Accept these terms so you can send your anonymous messages. Keep these items in mind when composing your message."),
+                .normal("Accept these terms so you can send your pools. Keep these items in mind when composing your message."),
                 .normal("Remember, 'GREAT POWERS COME WITH GREAT RESPONSIBILITIES.'")
             ]
             
@@ -154,16 +154,25 @@ class SendMessageViewController: UIViewController {
         UIView.animate(withDuration: 0.5) {
             self.loadingView.alpha = 1
         }
+        let link1 = "https://bit.ly/2X1rKGZ"
+        let link2 = "https://bit.ly/2X1rKGZ"
+        let link3 = "https://bit.ly/2X1rKGZ"
+        
+        let question01 = "Opção 01"
+        let question02 = "Opção 02"
+        let question03 = "Opção 03"
         
         let user = Auth.auth().currentUser!
-        let fullMessage = "_You reveived an anonymous message from user: \(user.uid)_\n________________________\n\n\n*\(self.messageText.text!)*\n\n________________________\n_This message was sent using the app 'Poll for WhatsApp' for iOS._"
+        let fullMessage = "_You reveived a poll message from user: \(user.phoneNumber!)_\n________________________\n\n\n*\(self.messageText.text!)*\n\n1) \(question01) [\(link1)]\n\n2) \(question02) [\(link2)]\n\n3) \(question03) [\(link3)]\n________________________\n_This message was sent using the app 'Poll for WhatsApp' for iOS._"
         
         
         self.viewModel.sendMessageWassenger(countryCode: self.countryCodeLabel.text!, phoneNumber: self.phoneNumberText.text!, messageText: fullMessage) { (response, error) in
             
             
-            UIView.animate(withDuration: 0.5) {
-                self.loadingView.alpha = 0
+            DispatchQueue.main.async{
+                UIView.animate(withDuration: 0.5) {
+                    self.loadingView.alpha = 0
+                }
             }
             
             if let err = error {

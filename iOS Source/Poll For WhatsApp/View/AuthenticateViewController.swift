@@ -72,7 +72,7 @@ class AuthenticateViewController: UIViewController {
             self.verificationCodeText.textContentType = .oneTimeCode
         }
         
-        let color = UIColor(red: 51.0/255.0, green: 80.0/255.0, blue: 128.0/255.0, alpha: 0.5)
+        let color = UIColor(red: 118.0/255.0, green: 132.0/255.0, blue: 159.0/255.0, alpha: 0.7)
         self.verificationCodeText.attributedPlaceholder = NSAttributedString(string: self.verificationCodeText.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: color])
         self.verificationCodeText.delegate = self
         self.verificationCodeText.becomeFirstResponder()

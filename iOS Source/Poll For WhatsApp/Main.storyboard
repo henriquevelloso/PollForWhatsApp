@@ -29,19 +29,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_ipad" translatesAutoresizingMaskIntoConstraints="NO" id="G8F-Sj-kB3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgDefault" translatesAutoresizingMaskIntoConstraints="NO" id="G8F-Sj-kB3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="92Q-15-Kvj">
+                                <rect key="frame" x="0.0" y="230" width="414" height="666"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-Nl-7sY" userLabel="Login">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="tgT-Vm-NMP">
-                                        <rect key="frame" x="110" y="65" width="194" height="194"/>
+                                        <rect key="frame" x="107" y="100" width="200" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="tgT-Vm-NMP" secondAttribute="height" multiplier="1:1" id="r6Z-TA-yR9"/>
+                                            <constraint firstAttribute="height" constant="100" id="2lS-6z-kjM"/>
+                                            <constraint firstAttribute="width" constant="200" id="VDc-kY-gZn"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell a secret, send a message to any WhatsApp number ANONYMOUSLY." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvF-Rv-gvI">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crie, gerencie e compartilhe enquetes com seus contatos do WhatsApp." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvF-Rv-gvI">
                                         <rect key="frame" x="20" y="724" width="374" height="38"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,10 +74,10 @@
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                <color key="value" red="0.4392156862745098" green="0.30196078431372547" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.0" green="0.41201651900000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                <color key="value" red="0.50980392156862742" green="0.32156862745098036" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.23137254900000001" green="0.58039215690000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
                                                 <real key="value" value="7"/>
@@ -91,7 +95,7 @@
                                     <constraint firstItem="rHh-OE-SWR" firstAttribute="top" secondItem="jvF-Rv-gvI" secondAttribute="bottom" constant="20" id="Tox-hv-dnw"/>
                                     <constraint firstItem="jvF-Rv-gvI" firstAttribute="centerX" secondItem="qNh-Nl-7sY" secondAttribute="centerX" id="TxK-ze-zK3"/>
                                     <constraint firstItem="jvF-Rv-gvI" firstAttribute="width" secondItem="qNh-Nl-7sY" secondAttribute="width" multiplier="0.9" constant="1" id="VwJ-vV-L7h"/>
-                                    <constraint firstItem="tgT-Vm-NMP" firstAttribute="top" secondItem="qNh-Nl-7sY" secondAttribute="top" constant="65" id="YL8-Ca-dio"/>
+                                    <constraint firstItem="tgT-Vm-NMP" firstAttribute="top" secondItem="qNh-Nl-7sY" secondAttribute="top" constant="100" id="YL8-Ca-dio"/>
                                     <constraint firstAttribute="trailing" secondItem="rHh-OE-SWR" secondAttribute="trailing" constant="30" id="dMT-bu-VF1"/>
                                     <constraint firstItem="tgT-Vm-NMP" firstAttribute="centerX" secondItem="qNh-Nl-7sY" secondAttribute="centerX" id="fUp-SN-E92"/>
                                 </constraints>
@@ -99,13 +103,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="92Q-15-Kvj" secondAttribute="bottom" id="A6o-C4-edn"/>
                             <constraint firstItem="7wG-tV-IKi" firstAttribute="bottom" secondItem="qNh-Nl-7sY" secondAttribute="bottom" id="O0Q-ar-t8u"/>
                             <constraint firstItem="qNh-Nl-7sY" firstAttribute="leading" secondItem="7wG-tV-IKi" secondAttribute="leading" id="Olv-OR-m5N"/>
+                            <constraint firstItem="92Q-15-Kvj" firstAttribute="trailing" secondItem="7wG-tV-IKi" secondAttribute="trailing" id="P2e-8y-m3V"/>
+                            <constraint firstItem="92Q-15-Kvj" firstAttribute="leading" secondItem="7wG-tV-IKi" secondAttribute="leading" id="Q2h-HK-m5l"/>
                             <constraint firstItem="G8F-Sj-kB3" firstAttribute="leading" secondItem="7wG-tV-IKi" secondAttribute="leading" id="Ry4-LV-Asv"/>
                             <constraint firstItem="7wG-tV-IKi" firstAttribute="trailing" secondItem="qNh-Nl-7sY" secondAttribute="trailing" id="Vck-r6-g27"/>
                             <constraint firstItem="qNh-Nl-7sY" firstAttribute="top" secondItem="Jdg-Lu-qR4" secondAttribute="top" id="dCG-Fp-3CA"/>
                             <constraint firstItem="G8F-Sj-kB3" firstAttribute="trailing" secondItem="7wG-tV-IKi" secondAttribute="trailing" id="dlV-4d-XjD"/>
                             <constraint firstItem="G8F-Sj-kB3" firstAttribute="top" secondItem="Jdg-Lu-qR4" secondAttribute="top" id="mje-cf-WkD"/>
+                            <constraint firstItem="92Q-15-Kvj" firstAttribute="firstBaseline" secondItem="tgT-Vm-NMP" secondAttribute="baseline" constant="30" id="nDY-va-fMl"/>
                             <constraint firstAttribute="bottom" secondItem="G8F-Sj-kB3" secondAttribute="bottom" id="wdY-4L-77b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7wG-tV-IKi"/>
@@ -120,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKF-6q-jNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2209" y="25"/>
+            <point key="canvasLocation" x="2207.2463768115945" y="24.776785714285712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Vk-sh-2Ew">
@@ -131,7 +139,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.50980392159999999" green="0.56470588239999997" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -156,8 +164,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_ipad" translatesAutoresizingMaskIntoConstraints="NO" id="Z1Z-Iq-4y5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Z1Z-Iq-4y5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="vJt-iq-wRq">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYW-zB-gq5" userLabel="Phone">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
@@ -289,10 +300,10 @@
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.0" green="0.41201651900000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.23137254900000001" green="0.58039215690000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
                                                         <real key="value" value="7"/>
@@ -345,12 +356,16 @@
                         <color key="backgroundColor" red="0.11391787976026535" green="0.17622604966163635" blue="0.29003667831420898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="z5D-ng-osc" firstAttribute="centerX" secondItem="1hY-jX-cxU" secondAttribute="centerX" id="1j1-Qs-Hn6"/>
+                            <constraint firstItem="vJt-iq-wRq" firstAttribute="top" secondItem="1hY-jX-cxU" secondAttribute="top" constant="100" id="44E-Zx-m6G"/>
                             <constraint firstAttribute="bottom" secondItem="Z1Z-Iq-4y5" secondAttribute="bottom" id="F8R-ba-4yj"/>
                             <constraint firstItem="WYW-zB-gq5" firstAttribute="trailing" secondItem="mFE-ft-JiL" secondAttribute="trailing" id="FPx-aU-DpD"/>
                             <constraint firstItem="Z1Z-Iq-4y5" firstAttribute="top" secondItem="1hY-jX-cxU" secondAttribute="top" id="G6p-sN-8vn"/>
                             <constraint firstItem="WYW-zB-gq5" firstAttribute="bottom" secondItem="mFE-ft-JiL" secondAttribute="bottom" id="LIY-OE-emb"/>
+                            <constraint firstAttribute="bottom" secondItem="vJt-iq-wRq" secondAttribute="bottom" id="a36-Cn-3kI"/>
                             <constraint firstItem="Z1Z-Iq-4y5" firstAttribute="trailing" secondItem="mFE-ft-JiL" secondAttribute="trailing" id="aiq-Tn-StF"/>
+                            <constraint firstItem="vJt-iq-wRq" firstAttribute="leading" secondItem="mFE-ft-JiL" secondAttribute="leading" id="dPx-vh-aun"/>
                             <constraint firstItem="z5D-ng-osc" firstAttribute="centerY" secondItem="1hY-jX-cxU" secondAttribute="centerY" id="eSs-Dt-EGp"/>
+                            <constraint firstItem="vJt-iq-wRq" firstAttribute="trailing" secondItem="mFE-ft-JiL" secondAttribute="trailing" id="hPh-ck-S0S"/>
                             <constraint firstItem="WYW-zB-gq5" firstAttribute="top" secondItem="1hY-jX-cxU" secondAttribute="top" id="hRF-MN-mb4"/>
                             <constraint firstItem="z5D-ng-osc" firstAttribute="height" secondItem="1hY-jX-cxU" secondAttribute="height" id="mvT-oj-lEE"/>
                             <constraint firstItem="Z1Z-Iq-4y5" firstAttribute="leading" secondItem="mFE-ft-JiL" secondAttribute="leading" id="pH7-Ac-oQB"/>
@@ -396,8 +411,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_ipad" translatesAutoresizingMaskIntoConstraints="NO" id="10E-y4-7UI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgDefault" translatesAutoresizingMaskIntoConstraints="NO" id="10E-y4-7UI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="EGE-6V-fno">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-0n-wYb" userLabel="authenticate">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
@@ -473,10 +491,10 @@ send by sms to</string>
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.0" green="0.41201651900000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.23137254900000001" green="0.58039215690000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
                                                         <real key="value" value="7"/>
@@ -530,6 +548,8 @@ send by sms to</string>
                         <color key="backgroundColor" red="0.1139178798" green="0.1762260497" blue="0.29003667830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Dkr-4U-61M" firstAttribute="width" secondItem="PIw-0p-aRs" secondAttribute="width" id="5y1-CZ-aVQ"/>
+                            <constraint firstItem="EGE-6V-fno" firstAttribute="top" secondItem="PIw-0p-aRs" secondAttribute="top" constant="100" id="8iG-8H-QMj"/>
+                            <constraint firstItem="EGE-6V-fno" firstAttribute="leading" secondItem="Udb-Wq-m7A" secondAttribute="leading" id="FTP-2H-QmF"/>
                             <constraint firstItem="10E-y4-7UI" firstAttribute="top" secondItem="PIw-0p-aRs" secondAttribute="top" id="GW3-gb-Eia"/>
                             <constraint firstItem="Dkr-4U-61M" firstAttribute="centerX" secondItem="PIw-0p-aRs" secondAttribute="centerX" id="OVD-uK-iNv"/>
                             <constraint firstItem="Dkr-4U-61M" firstAttribute="centerY" secondItem="PIw-0p-aRs" secondAttribute="centerY" id="Skl-f1-eZj"/>
@@ -537,10 +557,12 @@ send by sms to</string>
                             <constraint firstItem="2JV-0n-wYb" firstAttribute="top" secondItem="PIw-0p-aRs" secondAttribute="top" id="Xvy-74-YVo"/>
                             <constraint firstItem="2JV-0n-wYb" firstAttribute="leading" secondItem="Udb-Wq-m7A" secondAttribute="leading" id="eb4-SA-Owa"/>
                             <constraint firstItem="2JV-0n-wYb" firstAttribute="bottom" secondItem="Udb-Wq-m7A" secondAttribute="bottom" id="fL8-kS-Le7"/>
+                            <constraint firstItem="Udb-Wq-m7A" firstAttribute="bottom" secondItem="EGE-6V-fno" secondAttribute="bottomMargin" constant="8" id="job-Gy-gEx"/>
                             <constraint firstItem="10E-y4-7UI" firstAttribute="leading" secondItem="Udb-Wq-m7A" secondAttribute="leading" id="ngn-52-QnE"/>
                             <constraint firstItem="2JV-0n-wYb" firstAttribute="trailing" secondItem="Udb-Wq-m7A" secondAttribute="trailing" id="o2c-GL-kow"/>
                             <constraint firstAttribute="bottom" secondItem="10E-y4-7UI" secondAttribute="bottom" id="oZ6-dE-X0R"/>
                             <constraint firstItem="10E-y4-7UI" firstAttribute="trailing" secondItem="Udb-Wq-m7A" secondAttribute="trailing" id="sfC-os-2s1"/>
+                            <constraint firstItem="EGE-6V-fno" firstAttribute="trailing" secondItem="Udb-Wq-m7A" secondAttribute="trailing" id="wER-mw-bvv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Udb-Wq-m7A"/>
                         <connections>
@@ -565,9 +587,9 @@ send by sms to</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2209" y="789"/>
+            <point key="canvasLocation" x="2208.695652173913" y="788.83928571428567"/>
         </scene>
-        <!--NEW MESSAGE-->
+        <!--CREATE A NEW POLL-->
         <scene sceneID="0Bm-5h-CFR">
             <objects>
                 <viewController id="pk8-OO-Uba" customClass="SendMessageViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -579,129 +601,13 @@ send by sms to</string>
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-F5-lo4" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="683"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="513"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-fZ-AD5" userLabel="content avoiding keyboard">
-                                                <rect key="frame" x="12" y="0.0" width="390" height="490"/>
+                                                <rect key="frame" x="12" y="0.0" width="390" height="320"/>
                                                 <subviews>
-                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3N-9y-oII" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="25" width="390" height="140"/>
-                                                        <subviews>
-                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBm-nK-hlx" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="390" height="35"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining messages to send" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-Em-2DM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="35"/>
-                                                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="16"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="Vrt-Em-2DM" secondAttribute="bottom" id="M3c-6u-k4Q"/>
-                                                                    <constraint firstItem="Vrt-Em-2DM" firstAttribute="top" secondItem="hBm-nK-hlx" secondAttribute="top" id="VKo-fA-7Jw"/>
-                                                                    <constraint firstItem="Vrt-Em-2DM" firstAttribute="leading" secondItem="hBm-nK-hlx" secondAttribute="leading" id="bM0-UX-ur9"/>
-                                                                    <constraint firstAttribute="height" constant="35" id="iUT-2P-MKo"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="Vrt-Em-2DM" secondAttribute="trailing" id="x6e-RK-pf1"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
-                                                                        <real key="value" value="0.0"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="7"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
-                                                                        <real key="value" value="0.0"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7wK-OQ-f3v">
-                                                                <rect key="frame" x="30" y="35" width="330" height="105"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJN-qg-Cla">
-                                                                        <rect key="frame" x="0.0" y="8" width="123.5" height="89"/>
-                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="80"/>
-                                                                        <color key="textColor" red="0.65652024745941162" green="0.4812965989112854" blue="0.9720274806022644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDv-0D-RtN" customClass="TrueUIButton" customModule="Poll_For_WhatsApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="123.5" y="30" width="206.5" height="45"/>
-                                                                        <color key="backgroundColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="45" id="sal-T1-rgH"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
-                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <state key="normal" title="GET MORE"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
-                                                                                <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
-                                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
-                                                                                <real key="value" value="0.0"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="7"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                                                <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                                                <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
-                                                                                <real key="value" value="7"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                        <connections>
-                                                                            <action selector="sendCodeTapped:" destination="24J-oB-8fl" eventType="touchUpInside" id="HoN-gb-TDw"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="7wK-OQ-f3v" firstAttribute="top" secondItem="hBm-nK-hlx" secondAttribute="bottom" id="11q-Zw-oQP"/>
-                                                            <constraint firstItem="hBm-nK-hlx" firstAttribute="top" secondItem="a3N-9y-oII" secondAttribute="top" id="325-Kv-p8e"/>
-                                                            <constraint firstAttribute="trailing" secondItem="7wK-OQ-f3v" secondAttribute="trailing" constant="30" id="8Ab-Fn-nfe"/>
-                                                            <constraint firstAttribute="bottom" secondItem="7wK-OQ-f3v" secondAttribute="bottom" id="AhA-tP-Ww5"/>
-                                                            <constraint firstAttribute="trailing" secondItem="hBm-nK-hlx" secondAttribute="trailing" id="KTz-13-mxw"/>
-                                                            <constraint firstItem="7wK-OQ-f3v" firstAttribute="leading" secondItem="a3N-9y-oII" secondAttribute="leading" constant="30" id="MFM-kc-a7n"/>
-                                                            <constraint firstAttribute="height" constant="140" id="VTP-TJ-LTM"/>
-                                                            <constraint firstItem="hBm-nK-hlx" firstAttribute="leading" secondItem="a3N-9y-oII" secondAttribute="leading" id="bST-GZ-txG"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="7"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
-                                                                <real key="value" value="7"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                                <color key="value" red="0.50980392156862742" green="0.32156862745098036" blue="0.99607843137254903" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                                <color key="value" red="0.4392156862745098" green="0.30196078431372547" blue="0.792156862745098" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4B-KR-APa" userLabel="form">
-                                                        <rect key="frame" x="0.0" y="190" width="390" height="300"/>
+                                                        <rect key="frame" x="0.0" y="20" width="390" height="300"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNM-5t-cnN" userLabel="Country code" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="55"/>
@@ -740,7 +646,7 @@ send by sms to</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.15020333905479452" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="rk6-Uv-QaX" secondAttribute="bottom" id="0pk-qq-ce9"/>
                                                                     <constraint firstItem="rk6-Uv-QaX" firstAttribute="top" secondItem="qNM-5t-cnN" secondAttribute="top" id="2pi-BJ-3xE"/>
@@ -778,13 +684,44 @@ send by sms to</string>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" textContentType="tel"/>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="LIX-pa-Rh9" firstAttribute="leading" secondItem="P4S-h6-LhG" secondAttribute="leading" id="3bv-hX-9ce"/>
                                                                     <constraint firstItem="LIX-pa-Rh9" firstAttribute="top" secondItem="P4S-h6-LhG" secondAttribute="top" id="Kiv-Od-bJZ"/>
                                                                     <constraint firstAttribute="trailing" secondItem="LIX-pa-Rh9" secondAttribute="trailing" id="axQ-6a-co5"/>
                                                                     <constraint firstAttribute="bottom" secondItem="LIX-pa-Rh9" secondAttribute="bottom" id="cE4-QC-pPf"/>
                                                                     <constraint firstAttribute="height" constant="55" id="mPY-zg-wNb"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                                                        <real key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uY1-lf-5vY" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="63" width="390" height="160"/>
+                                                                <subviews>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-t3-Srr">
+                                                                        <rect key="frame" x="8" y="8" width="374" height="144"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="18"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="160" id="IXx-LY-az5"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="2Qu-t3-Srr" secondAttribute="bottom" constant="8" id="fPE-cB-e5x"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="2Qu-t3-Srr" secondAttribute="trailing" constant="8" id="m2p-GF-JCT"/>
+                                                                    <constraint firstItem="2Qu-t3-Srr" firstAttribute="leading" secondItem="uY1-lf-5vY" secondAttribute="leading" constant="8" id="qaf-7p-glk"/>
+                                                                    <constraint firstItem="2Qu-t3-Srr" firstAttribute="top" secondItem="uY1-lf-5vY" secondAttribute="top" constant="8" id="tET-Up-HXN"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
@@ -821,10 +758,10 @@ send by sms to</string>
                                                                         <real key="value" value="7"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                                        <color key="value" red="0.43921568630000002" green="0.30196078430000001" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="value" red="0.0" green="0.41201651900000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                                        <color key="value" red="0.50980392159999999" green="0.32156862749999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="value" red="0.23137254900000001" green="0.58039215690000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
                                                                         <real key="value" value="7"/>
@@ -834,37 +771,6 @@ send by sms to</string>
                                                                     <action selector="sendMessageAction:" destination="pk8-OO-Uba" eventType="touchUpInside" id="ZEj-iF-3rk"/>
                                                                 </connections>
                                                             </button>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uY1-lf-5vY" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="63" width="390" height="160"/>
-                                                                <subviews>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-t3-Srr">
-                                                                        <rect key="frame" x="8" y="8" width="374" height="144"/>
-                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="18"/>
-                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                                    </textView>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.24550513700000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="160" id="IXx-LY-az5"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="2Qu-t3-Srr" secondAttribute="bottom" constant="8" id="fPE-cB-e5x"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="2Qu-t3-Srr" secondAttribute="trailing" constant="8" id="m2p-GF-JCT"/>
-                                                                    <constraint firstItem="2Qu-t3-Srr" firstAttribute="leading" secondItem="uY1-lf-5vY" secondAttribute="leading" constant="8" id="qaf-7p-glk"/>
-                                                                    <constraint firstItem="2Qu-t3-Srr" firstAttribute="top" secondItem="uY1-lf-5vY" secondAttribute="top" constant="8" id="tET-Up-HXN"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
-                                                                        <real key="value" value="0.0"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="7"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
-                                                                        <real key="value" value="7"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -886,20 +792,22 @@ send by sms to</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="x4B-KR-APa" secondAttribute="trailing" id="C2w-Cn-OKW"/>
-                                                    <constraint firstItem="a3N-9y-oII" firstAttribute="leading" secondItem="X3U-fZ-AD5" secondAttribute="leading" id="Dnj-lk-FoE"/>
-                                                    <constraint firstAttribute="trailing" secondItem="a3N-9y-oII" secondAttribute="trailing" id="Ra7-zm-bOL"/>
                                                     <constraint firstItem="x4B-KR-APa" firstAttribute="leading" secondItem="X3U-fZ-AD5" secondAttribute="leading" id="cKw-UW-ZfP"/>
-                                                    <constraint firstItem="x4B-KR-APa" firstAttribute="top" secondItem="a3N-9y-oII" secondAttribute="bottom" constant="25" id="jY8-dg-f1D"/>
+                                                    <constraint firstItem="x4B-KR-APa" firstAttribute="top" secondItem="X3U-fZ-AD5" secondAttribute="top" constant="20" id="iVf-iz-pX8"/>
                                                     <constraint firstAttribute="bottom" secondItem="x4B-KR-APa" secondAttribute="bottom" id="v1R-pj-b8b"/>
-                                                    <constraint firstItem="a3N-9y-oII" firstAttribute="top" secondItem="X3U-fZ-AD5" secondAttribute="top" constant="25" id="xkP-9J-lzW"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHx-qX-JJD">
-                                                <rect key="frame" x="12" y="490" width="390" height="168"/>
+                                                <rect key="frame" x="12" y="320" width="390" height="168"/>
                                                 <string key="text">*Your identity or your phone number will not be sent in the message, this will be totally anonymous and sent from one of our phone numbers. Will be recorded in our database the message content, who sent the message and the phone number of destination, in total privacy. This message will be logged for security reasons only. You are fully responsible for the content you submit in the messages. Do not send messages with offensive content, we can reveal who you are to the recipient of the message. Keep this itens in mind when you are composing your anonymous message. Accept these terms so you can send your anonymous messages. Keep these items in mind when composing your message. Remember, 'GREAT POWERS COME WITH GREAT RESPONSIBILITIES.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" red="0.23546437406440768" green="0.41460038380296399" blue="0.66771097715736039" alpha="0.73135166952054798" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -952,17 +860,17 @@ send by sms to</string>
                         <viewLayoutGuide key="safeArea" id="jwl-b9-IxJ"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                <color key="value" red="0.16838359443796072" green="0.29015186177477348" blue="0.45968829314720816" alpha="0.64948095034246578" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.50980392156862742" green="0.56470588235294117" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                <color key="value" red="0.066666666666666666" green="0.11764705882352941" blue="0.20000000000000001" alpha="0.64948095034246578" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.31764705882352939" green="0.38039215686274508" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="0B5-LG-r58" appends="YES" id="kiF-hq-IMl"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="NEW MESSAGE" id="umD-KA-z6x"/>
+                    <navigationItem key="navigationItem" title="CREATE A NEW POLL" id="umD-KA-z6x"/>
                     <connections>
                         <outlet property="countryCodeLabel" destination="rk6-Uv-QaX" id="k0T-3h-XUP"/>
                         <outlet property="countryFlag" destination="fdd-Qe-RFP" id="Vcq-Fe-roC"/>
@@ -995,17 +903,19 @@ send by sms to</string>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sql-50-u4M">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.19215686274509802" green="0.2627450980392157" blue="0.19215686274509802" alpha="0.44258347602739728" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.19215686274509802" green="0.2627450980392157" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.31764705879999999" green="0.3803921569" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.2627450980392157" green="0.38431372549019605" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.193915965" green="0.193915965" blue="0.193915965" alpha="0.78352418664383561" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="8WD-Ex-Ai8" kind="relationship" relationship="viewControllers" id="bmm-eq-Ir0"/>
                         <segue destination="4MH-z0-3EF" kind="relationship" relationship="viewControllers" id="SVS-CX-LZP"/>
+                        <segue destination="8WD-Ex-Ai8" kind="relationship" relationship="viewControllers" id="bmm-eq-Ir0"/>
                         <segue destination="LDL-5S-u1u" kind="relationship" relationship="viewControllers" id="ALp-lJ-5Rp"/>
                     </connections>
                 </tabBarController>
@@ -1013,11 +923,11 @@ send by sms to</string>
             </objects>
             <point key="canvasLocation" x="3151" y="789"/>
         </scene>
-        <!--NEW MESSAGE-->
+        <!--CREATE-->
         <scene sceneID="nV4-p3-WOx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4MH-z0-3EF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="NEW MESSAGE" image="newMessageIcon" id="gHQ-x6-kyD">
+                    <tabBarItem key="tabBarItem" title="CREATE" image="newMessageIcon" id="gHQ-x6-kyD">
                         <inset key="imageInsets" minX="0.0" minY="-9" maxX="0.0" maxY="-9"/>
                         <inset key="largeContentSizeImageInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
@@ -1025,7 +935,7 @@ send by sms to</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZXa-Ta-2vb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.50980392159999999" green="0.56470588239999997" blue="0.67843137249999996" alpha="0.096452268835616445" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -1039,7 +949,7 @@ send by sms to</string>
             </objects>
             <point key="canvasLocation" x="2209" y="1629"/>
         </scene>
-        <!--HISTORY-->
+        <!--LIST OF YOUR POLLS-->
         <scene sceneID="84h-c0-iY9">
             <objects>
                 <viewController id="o4d-2i-Pc0" customClass="HistoryViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -1072,17 +982,17 @@ send by sms to</string>
                         <viewLayoutGuide key="safeArea" id="mS1-W3-nij"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                <color key="value" red="0.1683835944" green="0.29015186180000002" blue="0.45968829309999998" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.50980392159999999" green="0.56470588239999997" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                <color key="value" red="0.066666666669999999" green="0.1176470588" blue="0.20000000000000001" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.31764705879999999" green="0.3803921569" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="DjG-z9-YdD" appends="YES" id="IM4-AQ-gfe"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="HISTORY" id="n1A-RK-KPs"/>
+                    <navigationItem key="navigationItem" title="LIST OF YOUR POLLS" id="n1A-RK-KPs"/>
                     <connections>
                         <segue destination="Cg9-LB-15z" kind="showDetail" identifier="goToLogin" id="C2e-u4-t8h"/>
                     </connections>
@@ -1101,16 +1011,16 @@ send by sms to</string>
             </objects>
             <point key="canvasLocation" x="3151" y="3121"/>
         </scene>
-        <!--HISTORY-->
+        <!--POLL LIST-->
         <scene sceneID="EtV-TO-4CM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8WD-Ex-Ai8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HISTORY" image="historyIcon" id="OkJ-kB-adu"/>
+                    <tabBarItem key="tabBarItem" title="POLL LIST" image="historyIcon" id="OkJ-kB-adu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OEK-JD-TJT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.019607843137254902" green="0.086274509803921567" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.50980392156862742" green="0.56470588235294117" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -1133,7 +1043,7 @@ send by sms to</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MYa-GJ-D9A">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.019607843140000001" green="0.086274509799999996" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.50980392156862742" green="0.56470588235294117" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -1180,10 +1090,10 @@ send by sms to</string>
                         <viewLayoutGuide key="safeArea" id="zsu-Qx-BKC"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                <color key="value" red="0.16862745098039217" green="0.29019607843137252" blue="0.45882352941176469" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.50980392159999999" green="0.56470588239999997" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                <color key="value" red="0.066666666669999999" green="0.1176470588" blue="0.20000000000000001" alpha="0.64948095029999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.31764705879999999" green="0.3803921569" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
@@ -1204,9 +1114,10 @@ send by sms to</string>
     </scenes>
     <resources>
         <image name="US.png" width="40" height="30"/>
+        <image name="bgDefault" width="375" height="812"/>
+        <image name="hand" width="210" height="674"/>
         <image name="historyIcon" width="30" height="30"/>
-        <image name="launch_screen_ipad" width="653" height="812"/>
-        <image name="logo" width="194" height="130"/>
+        <image name="logo" width="127" height="81"/>
         <image name="newMessageIcon" width="31" height="29"/>
         <image name="settingsIcon" width="24" height="30"/>
     </resources>

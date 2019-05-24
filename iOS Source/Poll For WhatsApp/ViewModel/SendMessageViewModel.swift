@@ -34,7 +34,7 @@ class SendMessageViewModel {
         ]
         let parameters = [
             "phone": formattedNumber,
-            "message": message
+            "message": message,
             ] as [String : Any]
         do {
             let postData = try JSONSerialization.data(withJSONObject: parameters, options: [])
