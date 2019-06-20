@@ -21,4 +21,4 @@ A camada model no MVVM refere-se a camada de dados, representa o conteúdo e pod
 Ao trabalharmos com MVVM no desenvolvimento de aplicações para iOS seguimos as mesmas responsabilidades das camadas apresentadas anteriormente: model, view e viewmodel, mas no caso do iOS, o controller e a view na prática terminam sendo uma só. Por esse motivo temos a seguinte estrutura da arquitetura MVVM:
 
 ![Preview](/images/architecture/iosMvvm.png?raw=true "")
-<br>***Fonte: Desenvolvido pelo autor do Projeto [Figura ARQ001 — Estrutura MVC]***
+
