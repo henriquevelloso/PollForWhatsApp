@@ -1,4 +1,4 @@
-### User Stories
+# User Stories
 Para melhor ilustrar a solução proposta, foram criadas estórias de usuários (User Stories)
 listadas abaixo.
 <br><br>
