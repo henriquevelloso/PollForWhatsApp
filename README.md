@@ -15,14 +15,12 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [05 - Product Backlog](artefacts/productBacklog.md) [Doing]
 
-## [06 - Sprint Backlog](artefacts/sprintBacklog.md) [Doing]
+## [06 - Estórias de Usuários]<!-- (artefacts/userStories.md) -->
 
-## [07 - Estórias de Usuários]<!-- (artefacts/userStories.md) -->
+## [07 - Wireframes](artefacts/wireframes.md)
 
-## [08 - Wireframes](artefacts/wireframes.md)
+## [08 - Arquitetura](artefacts/architecture.md) [Doing]
 
-## [09 - Arquitetura](artefacts/architecture.md) [Doing]
+## [09 - Estrutura do Banco de Dados]<!-- (artefacts/databaseArchitecture.md) -->
 
-## [10 - Estrutura do Banco de Dados]<!-- (artefacts/databaseArchitecture.md) -->
-
-## [12 - Validação]<!-- (artefacts/validation.md) -->
+## [10 - Validação]<!-- (artefacts/validation.md) --> 
