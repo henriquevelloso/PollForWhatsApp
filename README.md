@@ -13,14 +13,14 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [04 - Business Model Canvas](artefacts/businessModelCanvas.md)
 
-## [05 - Product Backlog](artefacts/productBacklog.md)
+## [05 - Product Backlog](artefacts/productBacklog.md) *
 
-## [06 - User Stories](artefacts/userStories.md)
+## [06 - User Stories](artefacts/userStories.md) *
 
 ## [07 - Wireframes](artefacts/wireframes.md)
 
 ## [08 - Arquitetura](artefacts/architecture.md)
 
-## [09 - Estrutura do Banco de Dados](artefacts/databaseArchitecture.md)
+## [09 - Estrutura do Banco de Dados](artefacts/databaseArchitecture.md) *
 
-## [10 - Validação](artefacts/validation.md)
+## [10 - Validação](artefacts/validation.md) *
