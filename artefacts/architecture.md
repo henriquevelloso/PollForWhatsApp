@@ -26,4 +26,4 @@ Ao trabalharmos com MVVM no desenvolvimento de aplicações para iOS seguimos as
 
 O esquema abaixo visa demonstrar como funciona a arquitetura da solução desenvolvida.
 
-![Preview](/images/architecture/solucao.jpeg?raw=true "")
+![Preview](/images/architecture/solutionBeckend.png?raw=true "")
