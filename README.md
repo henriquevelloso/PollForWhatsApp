@@ -15,7 +15,7 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [05 - Product Backlog](artefacts/productBacklog.md)
 
-## [06 - Estórias de Usuários](artefacts/userStories.md)
+## [06 - User Stories](artefacts/userStories.md)
 
 ## [07 - Wireframes](artefacts/wireframes.md)
 
