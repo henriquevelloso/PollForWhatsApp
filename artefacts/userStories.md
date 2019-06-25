@@ -46,13 +46,7 @@ Como participante da enquete, necessito poder votar nas opções da enquete e co
 Assim poderei participar da votação dentro do aplicativo WhatsApp.
 ___________________________________________________
 
-#### US009
-**Computar voto unico**<br>
-Como usuário do aplicativo, necessito possibilitar ao participante registrar apenas 1 voto em cada enquete.
-Assim poderei ter resultados mais precisos para a tomada de decisão.
-___________________________________________________
-
-#### US010
-**Computar voto unico**<br>
+#### US008
+**Computar voto único**<br>
 Como usuário do aplicativo, necessito possibilitar ao participante registrar apenas 1 voto em cada enquete.
 Assim poderei ter resultados mais precisos para a tomada de decisão.
