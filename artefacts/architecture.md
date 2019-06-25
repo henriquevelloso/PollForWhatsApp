@@ -6,7 +6,7 @@ O modelo de arquitetura adotado para este projeto foi o Model-View-ViewModel, ou
 
 
 ![Preview](/images/architecture/mvvm.png?raw=true "")
-<br>***Fonte: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel***
+<br>***Fonte: https://en.wikipedia.org/wiki/Model–view–viewmodel***
 
 **Model**<br>
 A camada model no MVVM refere-se a camada de dados, representa o conteúdo e pode possuir regras de negócio.
@@ -22,3 +22,8 @@ Ao trabalharmos com MVVM no desenvolvimento de aplicações para iOS seguimos as
 
 ![Preview](/images/architecture/iosMvvm.png?raw=true "")
 
+## Arquitetura da Solução
+
+O esquema abaixo visa demonstrar como funciona a arquitetura da solução desenvolvida.
+
+![Preview](/images/architecture/solucao.jpeg?raw=true "")
