@@ -38,3 +38,9 @@ ___________________________________________________
 **Enviar ou compartilhar resultados**<br>
 Como usuário do aplicativo, necessito poder enviar o resultado de uma enquete para contatos e grupos do WhatsApp Messenger.
 Assim poderei tomar decisões em grupo de acordo com os dados compartilhados.
+___________________________________________________
+
+#### US007
+**Votar na enquete**<br>
+Como participante da enquete, necessito poder votar nas opções da enquete e computar meu voto, sem ter que sair do aplicativo WhatsApp.
+Assim poderei participar da votação dentro do aplicativo WhatsApp.
