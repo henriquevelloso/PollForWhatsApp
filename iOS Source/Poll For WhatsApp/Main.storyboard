@@ -46,7 +46,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crie, gerencie e compartilhe enquetes com seus contatos do WhatsApp." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvF-Rv-gvI">
-                                        <rect key="frame" x="20" y="724" width="374" height="38"/>
+                                        <rect key="frame" x="20" y="722" width="374" height="40"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -174,13 +174,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To log in, set your country and phone number to receive the verification code by sms." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6P-h6-phj">
-                                        <rect key="frame" x="20" y="140" width="374" height="51"/>
+                                        <rect key="frame" x="20" y="140" width="374" height="66.5"/>
                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-K3-zFA" userLabel="form">
-                                        <rect key="frame" x="12" y="246" width="390" height="140"/>
+                                        <rect key="frame" x="12" y="261.5" width="390" height="140"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZb-3t-bKL" userLabel="Country code" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="55"/>
@@ -429,13 +429,13 @@ send by sms to</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGx-a0-2HK">
-                                        <rect key="frame" x="20" y="174" width="374" height="22.5"/>
+                                        <rect key="frame" x="20" y="174" width="374" height="23.5"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-EU-L2v" userLabel="form">
-                                        <rect key="frame" x="12" y="251.5" width="390" height="140"/>
+                                        <rect key="frame" x="12" y="252.5" width="390" height="140"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-Yg-Fpy" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="55"/>
@@ -743,7 +743,7 @@ send by sms to</string>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="15"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="SEND MESSAGE"/>
+                                                                <state key="normal" title="SEND"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
                                                                         <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -893,7 +893,7 @@ send by sms to</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2207.2463768115945" y="2422.7678571428569"/>
+            <point key="canvasLocation" x="5332" y="100"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pJu-qR-shX">
@@ -947,7 +947,7 @@ send by sms to</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUd-OF-eqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2209" y="1629"/>
+            <point key="canvasLocation" x="4196" y="100"/>
         </scene>
         <!--LIST OF YOUR POLLS-->
         <scene sceneID="84h-c0-iY9">
@@ -1001,7 +1001,7 @@ send by sms to</string>
                 <tapGestureRecognizer id="iCm-5H-UzH" userLabel="Country Code Tap Gesture Recognizer"/>
                 <tapGestureRecognizer id="DjG-z9-YdD" userLabel="Dismiss Keyboard Tap Gesture Recognizer"/>
             </objects>
-            <point key="canvasLocation" x="3151" y="2423"/>
+            <point key="canvasLocation" x="5332" y="789"/>
         </scene>
         <!--Main-->
         <scene sceneID="oNn-Yk-PQb">
@@ -1009,7 +1009,7 @@ send by sms to</string>
                 <viewControllerPlaceholder storyboardName="Main" id="Cg9-LB-15z" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf5-lF-QYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151" y="3121"/>
+            <point key="canvasLocation" x="6359" y="789"/>
         </scene>
         <!--POLL LIST-->
         <scene sceneID="EtV-TO-4CM">
@@ -1032,7 +1032,7 @@ send by sms to</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qd5-67-Fbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151" y="1629"/>
+            <point key="canvasLocation" x="4197" y="789"/>
         </scene>
         <!--SETTINGS-->
         <scene sceneID="Ubm-hT-eW9">
@@ -1055,7 +1055,7 @@ send by sms to</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6S-Sn-5S0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4083" y="1629"/>
+            <point key="canvasLocation" x="4196" y="1560"/>
         </scene>
         <!--SETTINGS-->
         <scene sceneID="cGn-MQ-MSa">
@@ -1109,7 +1109,7 @@ send by sms to</string>
                 <tapGestureRecognizer id="zLm-Yl-RBE" userLabel="Country Code Tap Gesture Recognizer"/>
                 <tapGestureRecognizer id="uJb-9g-A5T" userLabel="Dismiss Keyboard Tap Gesture Recognizer"/>
             </objects>
-            <point key="canvasLocation" x="4083" y="2423"/>
+            <point key="canvasLocation" x="5332" y="1560"/>
         </scene>
     </scenes>
     <resources>

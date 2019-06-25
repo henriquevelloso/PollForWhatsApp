@@ -19,12 +19,10 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [07 - Estórias de Usuários]<!-- (artefacts/userStories.md) -->
 
-## [08 - Wireframes]<!-- (artefacts/wireframes.md) -->
+## [08 - Wireframes](artefacts/wireframes.md)
 
 ## [09 - Arquitetura](artefacts/architecture.md) [Doing]
 
 ## [10 - Estrutura do Banco de Dados]<!-- (artefacts/databaseArchitecture.md) -->
-
-## [11 - Funcionalidades]<!-- (artefacts/mainFeatures.md) -->
 
 ## [12 - Validação]<!-- (artefacts/validation.md) -->
