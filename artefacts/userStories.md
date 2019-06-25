@@ -44,3 +44,15 @@ ___________________________________________________
 **Votar na enquete**<br>
 Como participante da enquete, necessito poder votar nas opções da enquete e computar meu voto, sem ter que sair do aplicativo WhatsApp.
 Assim poderei participar da votação dentro do aplicativo WhatsApp.
+___________________________________________________
+
+#### US009
+**Computar voto unico**<br>
+Como usuário do aplicativo, necessito possibilitar ao participante registrar apenas 1 voto em cada enquete.
+Assim poderei ter resultados mais precisos para a tomada de decisão.
+___________________________________________________
+
+#### US010
+**Computar voto unico**<br>
+Como usuário do aplicativo, necessito possibilitar ao participante registrar apenas 1 voto em cada enquete.
+Assim poderei ter resultados mais precisos para a tomada de decisão.
