@@ -21,4 +21,4 @@ Abaixo estão listados os artefatos que servirão para completar o entendimento 
 
 ## [08 - Arquitetura](artefacts/architecture.md)
 
-## [09 - Validação](artefacts/validation.md) *
+## [09 - Validação](artefacts/validation.md)
