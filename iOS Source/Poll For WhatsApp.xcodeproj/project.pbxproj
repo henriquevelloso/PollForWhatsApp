@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C5193B992297840C004846EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5193B982297840C004846EE /* LaunchScreen.storyboard */; };
+		C51CDB8C22CCB3230089BEC2 /* PollDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51CDB8B22CCB3230089BEC2 /* PollDetailViewController.swift */; };
 		C51FC0C8228E7A680011574F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FC0C7228E7A680011574F /* AppDelegate.swift */; };
 		C5221E4F22971F7000BA7F40 /* PhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5221E4C22971F7000BA7F40 /* PhoneNumberViewModel.swift */; };
 		C5221E5022971F7000BA7F40 /* SendMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5221E4D22971F7000BA7F40 /* SendMessageViewModel.swift */; };
@@ -89,6 +90,8 @@
 		C585F1F322CB3B250028C863 /* PollListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F222CB3B250028C863 /* PollListViewController.swift */; };
 		C585F1F722CB625D0028C863 /* PollListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F622CB625C0028C863 /* PollListViewModel.swift */; };
 		C585F1F922CB64530028C863 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F822CB64530028C863 /* Poll.swift */; };
+		C585F20A22CC2D450028C863 /* PollTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C585F20822CC2D450028C863 /* PollTableViewCell.xib */; };
+		C585F20B22CC2D450028C863 /* PollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F20922CC2D450028C863 /* PollTableViewCell.swift */; };
 		D20B0B6E408ACB46F271BCDB /* Pods_Poll_For_WhatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773EA6ED5937CBCCE5904AA3 /* Pods_Poll_For_WhatsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,7 @@
 		4B0D8A187DDD7C5CC789D95B /* Pods-Poll For WhatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll For WhatsApp.debug.xcconfig"; path = "Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		773EA6ED5937CBCCE5904AA3 /* Pods_Poll_For_WhatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poll_For_WhatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5193B982297840C004846EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C51CDB8B22CCB3230089BEC2 /* PollDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollDetailViewController.swift; sourceTree = "<group>"; };
 		C51FC0C4228E7A680011574F /* Poll For WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll For WhatsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51FC0C7228E7A680011574F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C51FC0D3228E7A6A0011574F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 		C585F1F222CB3B250028C863 /* PollListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewController.swift; sourceTree = "<group>"; };
 		C585F1F622CB625C0028C863 /* PollListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewModel.swift; sourceTree = "<group>"; };
 		C585F1F822CB64530028C863 /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		C585F20822CC2D450028C863 /* PollTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollTableViewCell.xib; sourceTree = "<group>"; };
+		C585F20922CC2D450028C863 /* PollTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollTableViewCell.swift; sourceTree = "<group>"; };
 		CD1433ABC572474E0E5F3CC5 /* Pods-Poll For WhatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll For WhatsApp.release.xcconfig"; path = "Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -551,10 +557,12 @@
 		C5221EDB22971FEB00BA7F40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C585F20322CC2D140028C863 /* Cell */,
 				C5221EDD22971FEB00BA7F40 /* AuthenticateViewController.swift */,
 				C5221EDE22971FEB00BA7F40 /* PhoneNumberViewController.swift */,
 				C5221EDF22971FEB00BA7F40 /* LoginViewController.swift */,
 				C585F1F222CB3B250028C863 /* PollListViewController.swift */,
+				C51CDB8B22CCB3230089BEC2 /* PollDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,6 +616,15 @@
 				C5221E4D22971F7000BA7F40 /* SendMessageViewModel.swift */,
 			);
 			path = old;
+			sourceTree = "<group>";
+		};
+		C585F20322CC2D140028C863 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C585F20922CC2D450028C863 /* PollTableViewCell.swift */,
+				C585F20822CC2D450028C863 /* PollTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -684,6 +701,7 @@
 				C5221F032297274700BA7F40 /* GothamProBlack.ttf in Resources */,
 				C5221F092297283B00BA7F40 /* GoogleService-Info.plist in Resources */,
 				C5221EDA22971FDB00BA7F40 /* Main.storyboard in Resources */,
+				C585F20A22CC2D450028C863 /* PollTableViewCell.xib in Resources */,
 				C5221EFC2297272E00BA7F40 /* Assets.xcassets in Resources */,
 				C5193B992297840C004846EE /* LaunchScreen.storyboard in Resources */,
 				C5221F022297274700BA7F40 /* GothamProRegular.ttf in Resources */,
@@ -739,6 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C585F20B22CC2D450028C863 /* PollTableViewCell.swift in Sources */,
 				C5221EF522971FEC00BA7F40 /* TrueUIView.swift in Sources */,
 				C5221E5022971F7000BA7F40 /* SendMessageViewModel.swift in Sources */,
 				C585F1F722CB625D0028C863 /* PollListViewModel.swift in Sources */,
@@ -758,6 +777,7 @@
 				C5221EA722971F9400BA7F40 /* UIView+Extensions.swift in Sources */,
 				C5221EC722971F9400BA7F40 /* ContactsPickerViewController.swift in Sources */,
 				C5221EBA22971F9400BA7F40 /* PhoneCodeCell.swift in Sources */,
+				C51CDB8C22CCB3230089BEC2 /* PollDetailViewController.swift in Sources */,
 				C5221EF322971FEC00BA7F40 /* UIViewController.swift in Sources */,
 				C5221EAE22971F9400BA7F40 /* UIApplication+Extensions.swift in Sources */,
 				C5221EBE22971F9400BA7F40 /* OneTextFieldViewController.swift in Sources */,

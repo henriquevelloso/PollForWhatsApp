@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PollTableViewCell" rowHeight="98" id="KGk-i7-Jjw" customClass="PollTableViewCell" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="97.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C35-4e-40f" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                        <rect key="frame" x="8" y="4" width="347" height="89.5"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmi-vX-LIX" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="73.5" height="73.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-xt-djf">
+                                        <rect key="frame" x="0.0" y="15.5" width="73.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" red="0.42808221369999999" green="0.26209556919999999" blue="0.83969262570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8Z-nG-B4A">
+                                        <rect key="frame" x="0.0" y="43" width="73.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" red="0.42808221369999999" green="0.26209556919999999" blue="0.83969262570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zpm-xt-djf" secondAttribute="trailing" id="BQT-7S-5xJ"/>
+                                    <constraint firstItem="g8Z-nG-B4A" firstAttribute="leading" secondItem="gmi-vX-LIX" secondAttribute="leading" id="Cbk-lU-FGd"/>
+                                    <constraint firstItem="zpm-xt-djf" firstAttribute="centerX" secondItem="gmi-vX-LIX" secondAttribute="centerX" id="HRO-R1-ojZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="g8Z-nG-B4A" secondAttribute="trailing" id="JZf-Rb-cTK"/>
+                                    <constraint firstAttribute="width" constant="73.5" id="P1A-A8-zrQ"/>
+                                    <constraint firstItem="zpm-xt-djf" firstAttribute="centerY" secondItem="gmi-vX-LIX" secondAttribute="centerY" multiplier="0.8" id="P3M-NW-iWy"/>
+                                    <constraint firstItem="g8Z-nG-B4A" firstAttribute="top" secondItem="zpm-xt-djf" secondAttribute="bottom" id="Qei-WF-nyi"/>
+                                    <constraint firstItem="zpm-xt-djf" firstAttribute="leading" secondItem="gmi-vX-LIX" secondAttribute="leading" id="pch-3A-biO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ7-HT-rdG">
+                                <rect key="frame" x="89.5" y="8" width="249.5" height="73.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46344403772509235" green="0.5071043838603998" blue="0.59105897593809087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gmi-vX-LIX" firstAttribute="leading" secondItem="C35-4e-40f" secondAttribute="leading" constant="8" id="B6y-AM-uDa"/>
+                            <constraint firstItem="HZ7-HT-rdG" firstAttribute="leading" secondItem="gmi-vX-LIX" secondAttribute="trailing" constant="8" id="MfS-sJ-Sjh"/>
+                            <constraint firstAttribute="bottom" secondItem="gmi-vX-LIX" secondAttribute="bottom" constant="8" id="Okv-zC-fsG"/>
+                            <constraint firstItem="gmi-vX-LIX" firstAttribute="top" secondItem="C35-4e-40f" secondAttribute="top" constant="8" id="bFy-U5-nvm"/>
+                            <constraint firstItem="HZ7-HT-rdG" firstAttribute="top" secondItem="C35-4e-40f" secondAttribute="top" constant="8" id="kbj-fJ-2vD"/>
+                            <constraint firstAttribute="bottom" secondItem="HZ7-HT-rdG" secondAttribute="bottom" constant="8" id="nEG-on-ZOr"/>
+                            <constraint firstAttribute="trailing" secondItem="HZ7-HT-rdG" secondAttribute="trailing" constant="8" id="sW1-Og-HiE"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="xq9-67-brZ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="C35-4e-40f" secondAttribute="trailing" constant="8" id="F0h-ar-Qlf"/>
+                    <constraint firstItem="C35-4e-40f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="OAl-K7-lZ7"/>
+                    <constraint firstItem="C35-4e-40f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gMT-Nc-VaS"/>
+                    <constraint firstAttribute="bottom" secondItem="C35-4e-40f" secondAttribute="bottom" constant="4" id="vYo-ij-Ytx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLabel" destination="HZ7-HT-rdG" id="xSB-Dk-6Bo"/>
+                <outlet property="voteContainer" destination="gmi-vX-LIX" id="6Et-dj-AmR"/>
+                <outlet property="voteCountLabel" destination="zpm-xt-djf" id="Suc-oy-Y8g"/>
+            </connections>
+            <point key="canvasLocation" x="168.84057971014494" y="170.75892857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -19,16 +19,23 @@ class PollListViewController: UIViewController {
     private var viewModel: PollListViewModel?
     var user: UserLocal?
     var polls: [Poll]?
-    
+    let refreshControl = UIRefreshControl()
+
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var newPollButton: TrueUIButton!
+    @IBOutlet weak var loaderIndicator: UIActivityIndicatorView!
     
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.initViewModel()
         self.configNavigationBar()
+        self.configTableView()
         self.loadPollList()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,19 +79,86 @@ class PollListViewController: UIViewController {
         }
     }
     
+    @objc func refreshTableView() {
+        
+        self.loaderIndicator.isHidden = true
+        self.loadPollList()
+    }
+    
     func loadPollList() {
+        
+        UIView.animate(withDuration: 0.5) {
+            self.loadingView.isHidden = false
+            self.loadingView.alpha = 1
+        }
+        
         self.viewModel?.pollListRetrieveData(completionMain: { (polls, error) in
             
             self.polls = polls
+            self.tableView.reloadData()
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.loadingView.alpha = 0
+                self.tableView.alpha = 1
+            }, completion: { _ in
+                
+                self.loadingView.isHidden = false
+                self.refreshControl.endRefreshing()
+            })
+            
+            if let err = error {
+                self.showAlert(title: "Error", message: err.localizedDescription)
+            }
             
         })
     }
     
+    func configTableView() {
+        
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.width, height: 130))
+        let imageHeader = UIImageView(image: UIImage(named: "tableViewheader"))
+        imageHeader.contentMode = .scaleToFill
+        headerView.addSubview(imageHeader)
+        imageHeader.anchorCenterSuperview()
+        imageHeader.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 8).isActive = true
+        imageHeader.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -4).isActive = true
+        imageHeader.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: 8).isActive = true
+        imageHeader.rightAnchor.constraint(equalTo: headerView.rightAnchor, constant: -8).isActive = true
+        
+        self.tableView.alpha = 0
+        self.tableView.tableFooterView = UIView()
+        self.tableView.tableHeaderView = headerView
+        let nibName = UINib(nibName: "PollTableViewCell", bundle: nil)
+        self.tableView.register(nibName, forCellReuseIdentifier: "PollTableViewCell")
+        self.tableView.refreshControl = refreshControl
+        self.tableView.estimatedRowHeight = 80
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
+        self.refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        refreshControl.tintColor = UIColor.white
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Loading...", attributes: [.foregroundColor: UIColor.white])
+
+
+    }
+    
+    
+    // MARK: - Actions
+    
+    @IBAction func goToNewPollAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToNewPoll", sender: self)
+    }
+    
+
     // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+       
+        if segue.identifier == "goToNewPoll"
+        {
+//            if let destinationVC = segue.destinationViewController as? OtherViewController {
+//                destinationVC.numberToDisplay = counter
+//            }
+        }
+        
     }
     
 }
@@ -92,12 +166,27 @@ class PollListViewController: UIViewController {
 
 extension PollListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if let polls = self.polls {
+            return polls.count
+        }
+        
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let polls = self.polls {
+            
+            let poll = polls[indexPath.item]
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "PollTableViewCell", for: indexPath) as! PollTableViewCell
+            cell.commonInit(title: poll.title!, voteCount: "\(poll.voteCount ?? 0)")
+            cell.setVoteCountainerColor(voteCount: poll.voteCount ?? 0)
+            cell.selectionStyle = .none
+            return cell
+        }
+        
+        
         return UITableViewCell()
     }
-    
-    
 }
