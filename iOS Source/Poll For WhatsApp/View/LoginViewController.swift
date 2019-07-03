@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
                 self.user = Auth.auth().currentUser
                 if let user = self.user {
 //                    self.presentNextViewController()
-                    self.performSegue(withIdentifier: "goToMessagesDirect", sender: user)
+                    self.performSegue(withIdentifier: "goToPollListLogged", sender: user)
                 } else {
                     UIView.animate(withDuration: 1.1, animations: { //1.1
                         self.loginButton.alpha = 1
@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
             let _ = segue.destination as! PhoneNumberViewController
         }
         
-        if segue.identifier == "goToMessagesDirect" {
+        if segue.identifier == "goToPollListLogged" {
        //     let _ = segue.destination as! SendMessageViewController
             
         }

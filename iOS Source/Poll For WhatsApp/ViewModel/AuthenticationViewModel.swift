@@ -11,10 +11,10 @@ import UIKit
 import Firebase
 
 class AuthenticationViewModel {
- 
+    
     var refreshing = false
     
-    func signInAndRetrieveData(verificationCode:String, verificationID:String, completion: @escaping (UserLocal?, Error?) -> Void){
+    func signInAndRetrieveData(userLocal: UserLocal, verificationCode:String, verificationID:String, completion: @escaping (UserLocal?, Error?) -> Void){
         
         refreshing = true
         
@@ -28,11 +28,28 @@ class AuthenticationViewModel {
                 completion(nil, error)
             }
             
-            let user = UserLocal(userId: nil, number: nil, countryCode: nil, verificationID: verificationID, authenticationCode: verificationCode)
-            completion(user, nil)
+            let user = UserLocal(userId: authResult?.user.uid, number: authResult?.user.phoneNumber, countryCode: userLocal.countryCode, verificationID: verificationID, authenticationCode: verificationCode)
+            
+            let db = Firestore.firestore()
+            let ref = db.collection("users").document(user.number!)
+            ref.setData([
+                "userId": user.userId!,
+                "phoneNumber": user.number!,
+                "countryCode": user.countryCode!,
+                "lastLogin": Date()
+            ]) { (err) in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref.documentID)")
+                    completion(user, nil)
+                }
+            }
+            
+            self.refreshing = false
             
         }
-       
+        
     }
     
 }

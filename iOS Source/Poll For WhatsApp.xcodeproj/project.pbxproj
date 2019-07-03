@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -86,6 +86,9 @@
 		C5221F052297274700BA7F40 /* GothamProBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5221F012297274700BA7F40 /* GothamProBold.ttf */; };
 		C5221F072297275E00BA7F40 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5221F062297275E00BA7F40 /* StoreKit.framework */; };
 		C5221F092297283B00BA7F40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5221EF92297260A00BA7F40 /* GoogleService-Info.plist */; };
+		C585F1F322CB3B250028C863 /* PollListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F222CB3B250028C863 /* PollListViewController.swift */; };
+		C585F1F722CB625D0028C863 /* PollListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F622CB625C0028C863 /* PollListViewModel.swift */; };
+		C585F1F922CB64530028C863 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F822CB64530028C863 /* Poll.swift */; };
 		D20B0B6E408ACB46F271BCDB /* Pods_Poll_For_WhatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773EA6ED5937CBCCE5904AA3 /* Pods_Poll_For_WhatsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +177,9 @@
 		C5221F012297274700BA7F40 /* GothamProBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProBold.ttf; sourceTree = "<group>"; };
 		C5221F062297275E00BA7F40 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5221F08229727F900BA7F40 /* Poll For WhatsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Poll For WhatsApp.entitlements"; sourceTree = "<group>"; };
+		C585F1F222CB3B250028C863 /* PollListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewController.swift; sourceTree = "<group>"; };
+		C585F1F622CB625C0028C863 /* PollListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewModel.swift; sourceTree = "<group>"; };
+		C585F1F822CB64530028C863 /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		CD1433ABC572474E0E5F3CC5 /* Pods-Poll For WhatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll For WhatsApp.release.xcconfig"; path = "Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +235,7 @@
 		C51FC0C6228E7A680011574F /* Poll For WhatsApp */ = {
 			isa = PBXGroup;
 			children = (
+				C585F1F122CB39B40028C863 /* old */,
 				C51FC0C7228E7A680011574F /* AppDelegate.swift */,
 				C5221ED922971FDB00BA7F40 /* Main.storyboard */,
 				C5221EE922971FEC00BA7F40 /* Model */,
@@ -245,8 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				C5221E4C22971F7000BA7F40 /* PhoneNumberViewModel.swift */,
-				C5221E4D22971F7000BA7F40 /* SendMessageViewModel.swift */,
 				C5221E4E22971F7000BA7F40 /* AuthenticationViewModel.swift */,
+				C585F1F622CB625C0028C863 /* PollListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -544,12 +551,10 @@
 		C5221EDB22971FEB00BA7F40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C5221EDC22971FEB00BA7F40 /* SendMessageViewController.swift */,
 				C5221EDD22971FEB00BA7F40 /* AuthenticateViewController.swift */,
 				C5221EDE22971FEB00BA7F40 /* PhoneNumberViewController.swift */,
 				C5221EDF22971FEB00BA7F40 /* LoginViewController.swift */,
-				C5221EE022971FEB00BA7F40 /* HistoryViewController.swift */,
-				C5221EE122971FEB00BA7F40 /* SettingsViewController.swift */,
+				C585F1F222CB3B250028C863 /* PollListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 			children = (
 				C5221EEA22971FEC00BA7F40 /* UserLocal.swift */,
 				C5221EEB22971FEC00BA7F40 /* whatsResponse.swift */,
+				C585F1F822CB64530028C863 /* Poll.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -591,6 +597,17 @@
 				C5221F012297274700BA7F40 /* GothamProBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		C585F1F122CB39B40028C863 /* old */ = {
+			isa = PBXGroup;
+			children = (
+				C5221EE022971FEB00BA7F40 /* HistoryViewController.swift */,
+				C5221EE122971FEB00BA7F40 /* SettingsViewController.swift */,
+				C5221EDC22971FEB00BA7F40 /* SendMessageViewController.swift */,
+				C5221E4D22971F7000BA7F40 /* SendMessageViewModel.swift */,
+			);
+			path = old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -682,30 +699,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CountryKit/CountryKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
-				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -743,7 +741,9 @@
 			files = (
 				C5221EF522971FEC00BA7F40 /* TrueUIView.swift in Sources */,
 				C5221E5022971F7000BA7F40 /* SendMessageViewModel.swift in Sources */,
+				C585F1F722CB625D0028C863 /* PollListViewModel.swift in Sources */,
 				C5221EC622971F9400BA7F40 /* PickerViewViewController.swift in Sources */,
+				C585F1F922CB64530028C863 /* Poll.swift in Sources */,
 				C5221EED22971FEC00BA7F40 /* AuthenticateViewController.swift in Sources */,
 				C5221EF722971FEC00BA7F40 /* UserLocal.swift in Sources */,
 				C5221EA822971F9400BA7F40 /* Date+Extension.swift in Sources */,
@@ -774,6 +774,7 @@
 				C5221EC822971F9400BA7F40 /* Contacts.swift in Sources */,
 				C5221EA622971F9400BA7F40 /* UIViewController+Extensions.swift in Sources */,
 				C5221EBB22971F9400BA7F40 /* CurrencyCell.swift in Sources */,
+				C585F1F322CB3B250028C863 /* PollListViewController.swift in Sources */,
 				C5221EC222971F9400BA7F40 /* LocationPickerViewController.swift in Sources */,
 				C5221ED422971F9400BA7F40 /* SegmentedControl.swift in Sources */,
 				C5221ED522971F9400BA7F40 /* GradientSlider.swift in Sources */,

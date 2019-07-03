@@ -46,14 +46,14 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crie, gerencie e compartilhe enquetes com seus contatos do WhatsApp." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvF-Rv-gvI">
-                                        <rect key="frame" x="20" y="722" width="374" height="40"/>
+                                        <rect key="frame" x="20" y="724" width="374" height="38"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHh-OE-SWR" customClass="TrueUIButton" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                                         <rect key="frame" x="30" y="782" width="354" height="55"/>
-                                        <color key="backgroundColor" red="0.51219671964645386" green="0.31933388113975525" blue="0.99155062437057495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="pFJ-ch-rxz"/>
                                         </constraints>
@@ -74,10 +74,10 @@
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                <color key="value" red="0.0" green="0.41201651900000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.51219671964645386" green="0.31933388113975525" blue="0.99155062437057495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                <color key="value" red="0.23137254900000001" green="0.58039215690000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.42808221368870331" green="0.262095569182141" blue="0.83969262566591174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
                                                 <real key="value" value="7"/>
@@ -123,12 +123,12 @@
                         <outlet property="introdutionLabel" destination="jvF-Rv-gvI" id="p7a-hf-enP"/>
                         <outlet property="loginButton" destination="rHh-OE-SWR" id="1yX-uw-onH"/>
                         <segue destination="24J-oB-8fl" kind="show" identifier="goToPhoneNumber" id="RcT-t8-VCs"/>
-                        <segue destination="wVQ-QE-rCw" kind="showDetail" identifier="goToMessagesDirect" id="Kze-eF-qBm"/>
+                        <segue destination="8PI-UZ-bTQ" kind="show" identifier="goToPollListLogged" id="6fe-Dq-Qn9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKF-6q-jNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2207.2463768115945" y="24.776785714285712"/>
+            <point key="canvasLocation" x="7396" y="1988"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Vk-sh-2Ew">
@@ -154,7 +154,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyO-5V-e0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1290" y="25"/>
+            <point key="canvasLocation" x="6387" y="1988"/>
         </scene>
         <!--Phone Number View Controller-->
         <scene sceneID="hKu-dr-E3Y">
@@ -174,13 +174,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To log in, set your country and phone number to receive the verification code by sms." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6P-h6-phj">
-                                        <rect key="frame" x="20" y="140" width="374" height="66.5"/>
+                                        <rect key="frame" x="20" y="140" width="374" height="51"/>
                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-K3-zFA" userLabel="form">
-                                        <rect key="frame" x="12" y="261.5" width="390" height="140"/>
+                                        <rect key="frame" x="12" y="246" width="390" height="140"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZb-3t-bKL" userLabel="Country code" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="55"/>
@@ -300,10 +300,10 @@
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                        <color key="value" red="0.0" green="0.41201651900000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                        <color key="value" red="0.23137254900000001" green="0.58039215690000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.42808221369999999" green="0.26209556919999999" blue="0.83969262570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
                                                         <real key="value" value="7"/>
@@ -401,7 +401,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1289.8550724637682" y="788.83928571428567"/>
+            <point key="canvasLocation" x="6387" y="2796"/>
         </scene>
         <!--Authenticate View Controller-->
         <scene sceneID="2bT-g7-T3b">
@@ -429,13 +429,13 @@ send by sms to</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGx-a0-2HK">
-                                        <rect key="frame" x="20" y="174" width="374" height="23.5"/>
+                                        <rect key="frame" x="20" y="174" width="374" height="22.5"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-EU-L2v" userLabel="form">
-                                        <rect key="frame" x="12" y="252.5" width="390" height="140"/>
+                                        <rect key="frame" x="12" y="251.5" width="390" height="140"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-Yg-Fpy" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="55"/>
@@ -491,10 +491,10 @@ send by sms to</string>
                                                         <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
-                                                        <color key="value" red="0.0" green="0.41201651900000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="value" red="0.51219671960000002" green="0.31933388109999999" blue="0.99155062439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
-                                                        <color key="value" red="0.23137254900000001" green="0.58039215690000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.42808221369999999" green="0.26209556919999999" blue="0.83969262570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
                                                         <real key="value" value="7"/>
@@ -576,7 +576,7 @@ send by sms to</string>
                         <outlet property="phoneNumberLabel" destination="wGx-a0-2HK" id="hyb-35-U0D"/>
                         <outlet property="titleLabel" destination="nOi-Kt-9vI" id="nL1-nG-8dD"/>
                         <outlet property="verificationCodeText" destination="IXj-V9-dEZ" id="gqc-x6-ujV"/>
-                        <segue destination="wVQ-QE-rCw" kind="showDetail" identifier="goToMessages" id="PLq-lL-nNQ"/>
+                        <segue destination="8PI-UZ-bTQ" kind="show" identifier="goToPollList" id="ebC-Aa-Jr2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZr-xc-glB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -587,7 +587,51 @@ send by sms to</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2208.695652173913" y="788.83928571428567"/>
+            <point key="canvasLocation" x="7397" y="2796"/>
+        </scene>
+        <!--Poll for WhatsApp-->
+        <scene sceneID="cEN-hh-icA">
+            <objects>
+                <viewController title="Poll for WhatsApp" id="8PI-UZ-bTQ" customClass="PollListViewController" customModule="Poll_For_WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FQq-ah-Ii4" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m0g-VS-xIH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8PI-UZ-bTQ" id="UNK-9N-OYL"/>
+                                    <outlet property="delegate" destination="8PI-UZ-bTQ" id="gNs-xz-J2E"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ybw-Bm-KjG" firstAttribute="trailing" secondItem="m0g-VS-xIH" secondAttribute="trailing" id="9qc-Xx-SDn"/>
+                            <constraint firstItem="m0g-VS-xIH" firstAttribute="top" secondItem="ybw-Bm-KjG" secondAttribute="top" id="HjT-R0-Dij"/>
+                            <constraint firstItem="m0g-VS-xIH" firstAttribute="leading" secondItem="ybw-Bm-KjG" secondAttribute="leading" id="YFm-06-K0b"/>
+                            <constraint firstItem="m0g-VS-xIH" firstAttribute="bottom" secondItem="ybw-Bm-KjG" secondAttribute="bottom" constant="34" id="fgb-qY-OUM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ybw-Bm-KjG"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                <color key="value" red="0.50980392159999999" green="0.56470588239999997" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                <color key="value" red="0.35356402297392808" green="0.44865084417024975" blue="0.54537726683937826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="m0g-VS-xIH" id="vWW-hC-UOB"/>
+                        <segue destination="Cg9-LB-15z" kind="showDetail" identifier="goToLogin" id="e3C-XE-eFz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DI-Nn-VPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8402.898550724638" y="2353.7946428571427"/>
         </scene>
         <!--CREATE A NEW POLL-->
         <scene sceneID="0Bm-5h-CFR">
@@ -893,7 +937,7 @@ send by sms to</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5332" y="100"/>
+            <point key="canvasLocation" x="7172" y="-908"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pJu-qR-shX">
@@ -921,7 +965,7 @@ send by sms to</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCi-KM-ke8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151" y="789"/>
+            <point key="canvasLocation" x="4962" y="293"/>
         </scene>
         <!--CREATE-->
         <scene sceneID="nV4-p3-WOx">
@@ -947,7 +991,7 @@ send by sms to</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUd-OF-eqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4196" y="100"/>
+            <point key="canvasLocation" x="6167" y="-908"/>
         </scene>
         <!--LIST OF YOUR POLLS-->
         <scene sceneID="84h-c0-iY9">
@@ -1001,7 +1045,7 @@ send by sms to</string>
                 <tapGestureRecognizer id="iCm-5H-UzH" userLabel="Country Code Tap Gesture Recognizer"/>
                 <tapGestureRecognizer id="DjG-z9-YdD" userLabel="Dismiss Keyboard Tap Gesture Recognizer"/>
             </objects>
-            <point key="canvasLocation" x="5332" y="789"/>
+            <point key="canvasLocation" x="7171" y="-38"/>
         </scene>
         <!--Main-->
         <scene sceneID="oNn-Yk-PQb">
@@ -1009,7 +1053,7 @@ send by sms to</string>
                 <viewControllerPlaceholder storyboardName="Main" id="Cg9-LB-15z" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf5-lF-QYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6359" y="789"/>
+            <point key="canvasLocation" x="9707" y="1439"/>
         </scene>
         <!--POLL LIST-->
         <scene sceneID="EtV-TO-4CM">
@@ -1032,7 +1076,7 @@ send by sms to</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qd5-67-Fbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4197" y="789"/>
+            <point key="canvasLocation" x="6167" y="-38"/>
         </scene>
         <!--SETTINGS-->
         <scene sceneID="Ubm-hT-eW9">
@@ -1055,7 +1099,7 @@ send by sms to</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6S-Sn-5S0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4196" y="1560"/>
+            <point key="canvasLocation" x="6167" y="712"/>
         </scene>
         <!--SETTINGS-->
         <scene sceneID="cGn-MQ-MSa">
@@ -1109,7 +1153,7 @@ send by sms to</string>
                 <tapGestureRecognizer id="zLm-Yl-RBE" userLabel="Country Code Tap Gesture Recognizer"/>
                 <tapGestureRecognizer id="uJb-9g-A5T" userLabel="Dismiss Keyboard Tap Gesture Recognizer"/>
             </objects>
-            <point key="canvasLocation" x="5332" y="1560"/>
+            <point key="canvasLocation" x="7171" y="712"/>
         </scene>
     </scenes>
     <resources>
@@ -1122,7 +1166,7 @@ send by sms to</string>
         <image name="settingsIcon" width="24" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f3G-Mu-yp9"/>
-        <segue reference="PLq-lL-nNQ"/>
+        <segue reference="e3C-XE-eFz"/>
+        <segue reference="ebC-Aa-Jr2"/>
     </inferredMetricsTieBreakers>
 </document>

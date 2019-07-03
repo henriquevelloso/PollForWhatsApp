@@ -31,11 +31,20 @@ class AuthenticateViewController: UIViewController {
         self.keyboardConfig()
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         self.verificationCodeText.text = ""
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     //MARK: - Custom functions
     
     func keyboardConfig() {
@@ -43,12 +52,7 @@ class AuthenticateViewController: UIViewController {
     }
     
     func configNavigationBar() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
-        
-        
+               
         let suggestImage  = UIImage(named: "logoMark")!.withRenderingMode(.alwaysOriginal)
         let suggestButton = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
         suggestButton.setBackgroundImage(suggestImage, for: .normal)
@@ -102,7 +106,7 @@ class AuthenticateViewController: UIViewController {
             }
             
             
-            self.viewModel.signInAndRetrieveData(verificationCode: verificationCode, verificationID: verificationID) { user, error in
+            self.viewModel.signInAndRetrieveData(userLocal: user!, verificationCode: verificationCode, verificationID: verificationID) { user, error in
                 
                 if let er = error {
                     self.showAlert(title: "Error", message: er.localizedDescription, buttonTitles: ["OK"], highlightedButtonIndex: 0, completion: { index in
@@ -111,7 +115,7 @@ class AuthenticateViewController: UIViewController {
                         }
                     })
                 } else {
-                    self.performSegue(withIdentifier: "goToMessages", sender: user)
+                    self.performSegue(withIdentifier: "goToPollList", sender: user)
                 }
                 
             }
@@ -129,8 +133,13 @@ class AuthenticateViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "goToPollList" {
+            let viewController = segue.destination as! PollListViewController
+            viewController.user  = sender as? UserLocal
+            self.loadingView.isHidden = true
+            self.loadingView.alpha = 0
+        }
     }
     
 

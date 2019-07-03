@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct UserLocal {
+struct UserLocal : Codable{
     
     var userId: String?
     var number: String?

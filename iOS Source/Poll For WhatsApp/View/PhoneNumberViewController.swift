@@ -36,6 +36,12 @@ class PhoneNumberViewController: UIViewController {
         self.keyboardConfig()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+  
     //MARK: - Custom functions
     
     func keyboardConfig() {
@@ -43,12 +49,7 @@ class PhoneNumberViewController: UIViewController {
     }
     
     func configNavigationBar() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
-        
-        
+         
         let suggestImage  = UIImage(named: "logoMark")!.withRenderingMode(.alwaysOriginal)
         let suggestButton = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
         suggestButton.setBackgroundImage(suggestImage, for: .normal)
