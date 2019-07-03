@@ -34,7 +34,7 @@ class PollTableViewCell: UITableViewCell {
     
     func setVoteCountainerColor(voteCount: Int) {
         
-        var color = UIColor.init(hexString: "#B8C4D0")
+        var color = UIColor.init(hexString: "#EEEDEF")
         
         if voteCount > 3 && voteCount < 7 {
             color = UIColor.init(hexString: "#64FC92")

@@ -31,16 +31,22 @@ class PollListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.loaderIndicator.isHidden = false
+        self.loaderIndicator.startAnimating()
+        
         self.initViewModel()
         self.configNavigationBar()
         self.configTableView()
         self.loadPollList()
         
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        self.loaderIndicator.isHidden = false
+        self.loaderIndicator.startAnimating()
+        self.loadPollList()
     }
     
     //MARK: - Custom functions

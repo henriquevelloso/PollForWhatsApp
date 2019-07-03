@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C35-4e-40f" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                         <rect key="frame" x="8" y="4" width="347" height="89.5"/>
                         <subviews>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmi-vX-LIX" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmi-vX-LIX" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="73.5" height="73.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-xt-djf">
@@ -56,21 +56,45 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ7-HT-rdG">
-                                <rect key="frame" x="89.5" y="8" width="249.5" height="73.5"/>
+                                <rect key="frame" x="89.5" y="8" width="225.5" height="73.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkU-qO-BLP" userLabel="Seta" customClass="TrueUIView" customModule="Poll_For_WhatsApp" customModuleProvider="target">
+                                <rect key="frame" x="319" y="35" width="20" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LjW-4i-huk">
+                                        <rect key="frame" x="7" y="0.0" width="13" height="20"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.62894602749999995" green="0.69608234680000003" blue="0.84000439709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1xX-p9-gCH"/>
+                                    <constraint firstItem="LjW-4i-huk" firstAttribute="leading" secondItem="WkU-qO-BLP" secondAttribute="leading" constant="7" id="Crw-lz-B7C"/>
+                                    <constraint firstAttribute="bottom" secondItem="LjW-4i-huk" secondAttribute="bottom" id="N4w-7g-9vk"/>
+                                    <constraint firstAttribute="width" constant="20" id="X1f-xn-d2n"/>
+                                    <constraint firstItem="LjW-4i-huk" firstAttribute="top" secondItem="WkU-qO-BLP" secondAttribute="top" id="bvo-7u-f3j"/>
+                                    <constraint firstAttribute="trailing" secondItem="LjW-4i-huk" secondAttribute="trailing" id="yCZ-Fa-LXg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusProp">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.46344403772509235" green="0.5071043838603998" blue="0.59105897593809087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.51764705882352935" green="0.56470588235294117" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WkU-qO-BLP" firstAttribute="centerY" secondItem="C35-4e-40f" secondAttribute="centerY" id="1Ed-mD-4LX"/>
                             <constraint firstItem="gmi-vX-LIX" firstAttribute="leading" secondItem="C35-4e-40f" secondAttribute="leading" constant="8" id="B6y-AM-uDa"/>
+                            <constraint firstAttribute="trailing" secondItem="WkU-qO-BLP" secondAttribute="trailing" constant="8" id="GgC-n3-UHK"/>
                             <constraint firstItem="HZ7-HT-rdG" firstAttribute="leading" secondItem="gmi-vX-LIX" secondAttribute="trailing" constant="8" id="MfS-sJ-Sjh"/>
                             <constraint firstAttribute="bottom" secondItem="gmi-vX-LIX" secondAttribute="bottom" constant="8" id="Okv-zC-fsG"/>
                             <constraint firstItem="gmi-vX-LIX" firstAttribute="top" secondItem="C35-4e-40f" secondAttribute="top" constant="8" id="bFy-U5-nvm"/>
+                            <constraint firstItem="WkU-qO-BLP" firstAttribute="leading" secondItem="HZ7-HT-rdG" secondAttribute="trailing" constant="4" id="jNo-Is-qDg"/>
                             <constraint firstItem="HZ7-HT-rdG" firstAttribute="top" secondItem="C35-4e-40f" secondAttribute="top" constant="8" id="kbj-fJ-2vD"/>
                             <constraint firstAttribute="bottom" secondItem="HZ7-HT-rdG" secondAttribute="bottom" constant="8" id="nEG-on-ZOr"/>
-                            <constraint firstAttribute="trailing" secondItem="HZ7-HT-rdG" secondAttribute="trailing" constant="8" id="sW1-Og-HiE"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="xq9-67-brZ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -104,4 +128,7 @@
             <point key="canvasLocation" x="168.84057971014494" y="170.75892857142856"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="setaIcon" width="30" height="25"/>
+    </resources>
 </document>

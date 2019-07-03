@@ -18,31 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgDefault" translatesAutoresizingMaskIntoConstraints="NO" id="QIi-bj-Vvp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="QIi-bj-Vvp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="jzy-2p-ssq">
-                                <rect key="frame" x="0.0" y="230" width="414" height="666"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hands" translatesAutoresizingMaskIntoConstraints="NO" id="jzy-2p-ssq">
+                                <rect key="frame" x="20" y="280" width="374" height="636"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VTC-By-JW8">
-                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <rect key="frame" x="82" y="100" width="250" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="JuZ-MD-EDy"/>
-                                    <constraint firstAttribute="width" constant="200" id="qeV-Ol-EbU"/>
+                                    <constraint firstAttribute="height" constant="120" id="JuZ-MD-EDy"/>
+                                    <constraint firstAttribute="width" constant="250" id="qeV-Ol-EbU"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="QIi-bj-Vvp" secondAttribute="bottom" id="2OF-nD-LjV"/>
-                            <constraint firstItem="jzy-2p-ssq" firstAttribute="top" secondItem="VTC-By-JW8" secondAttribute="bottom" constant="30" id="OcY-rw-buw"/>
+                            <constraint firstItem="jzy-2p-ssq" firstAttribute="top" secondItem="VTC-By-JW8" secondAttribute="bottom" constant="60" id="OcY-rw-buw"/>
                             <constraint firstItem="QIi-bj-Vvp" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="VLP-Pm-9g2"/>
-                            <constraint firstItem="jzy-2p-ssq" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="WCl-OD-WBa"/>
+                            <constraint firstItem="jzy-2p-ssq" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" constant="-20" id="WCl-OD-WBa"/>
                             <constraint firstItem="QIi-bj-Vvp" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="ZAB-du-f94"/>
                             <constraint firstItem="VTC-By-JW8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="a9e-xT-iRa"/>
-                            <constraint firstItem="jzy-2p-ssq" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="mTw-ol-jFk"/>
+                            <constraint firstItem="jzy-2p-ssq" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" id="mTw-ol-jFk"/>
                             <constraint firstItem="VTC-By-JW8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="100" id="rN6-Qd-z1R"/>
-                            <constraint firstAttribute="bottom" secondItem="jzy-2p-ssq" secondAttribute="bottom" id="vSv-At-8n7"/>
+                            <constraint firstAttribute="bottom" secondItem="jzy-2p-ssq" secondAttribute="bottom" constant="-20" id="vSv-At-8n7"/>
                             <constraint firstItem="QIi-bj-Vvp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="z1W-VK-l0d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
@@ -54,8 +54,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bgDefault" width="375" height="812"/>
-        <image name="hand" width="210" height="674"/>
+        <image name="background" width="414" height="896"/>
+        <image name="hands" width="359" height="605"/>
         <image name="logo" width="127" height="81"/>
     </resources>
 </document>
