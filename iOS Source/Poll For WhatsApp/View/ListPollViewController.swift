@@ -1,5 +1,5 @@
 //
-//  PollListViewController.swift
+//  ListPollViewController.swift
 //  Poll For WhatsApp
 //
 //  Created by Henrique Velloso on 02/07/19.
@@ -16,7 +16,7 @@ class ListPollViewController: UIViewController {
     
     
     //MARK: - Properties
-    private var viewModel: PollListViewModel?
+    private var viewModel: ListPollViewModel?
     var user: UserLocal?
     var polls: [Poll]?
     let refreshControl = UIRefreshControl()
@@ -46,7 +46,9 @@ class ListPollViewController: UIViewController {
         
         self.loaderIndicator.isHidden = false
         self.loaderIndicator.startAnimating()
+        self.newPollButton.alpha = 0
         self.loadPollList()
+        
     }
     
     //MARK: - Custom functions
@@ -78,10 +80,10 @@ class ListPollViewController: UIViewController {
     func initViewModel() {
         
         if let user = self.user {
-            self.viewModel = PollListViewModel(userLocal: user)
+            self.viewModel = ListPollViewModel(userLocal: user)
         } else {
             self.user = UserLocal(userId: nil, number: Auth.auth().currentUser?.phoneNumber, countryCode: nil, verificationID: nil, authenticationCode: nil)
-            self.viewModel = PollListViewModel(userLocal: self.user!)
+            self.viewModel = ListPollViewModel(userLocal: self.user!)
         }
     }
     
@@ -93,7 +95,7 @@ class ListPollViewController: UIViewController {
     
     func loadPollList() {
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 1) {
             self.loadingView.isHidden = false
             self.loadingView.alpha = 1
         }
@@ -103,9 +105,10 @@ class ListPollViewController: UIViewController {
             self.polls = polls
             self.tableView.reloadData()
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 1, animations: {
                 self.loadingView.alpha = 0
                 self.tableView.alpha = 1
+                self.newPollButton.alpha = 1
             }, completion: { _ in
                 
                 self.loadingView.isHidden = false
@@ -160,16 +163,16 @@ class ListPollViewController: UIViewController {
        
         if segue.identifier == "goToNewPoll"
         {
-//            if let destinationVC = segue.destinationViewController as? OtherViewController {
-//                destinationVC.numberToDisplay = counter
-//            }
+            if let destinationVC = segue.destination as? NewPollViewController {
+                destinationVC.user = self.user
+            }
         }
         
     }
-    
+
 }
 
-
+// MARK: - TableView delegates
 extension ListPollViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

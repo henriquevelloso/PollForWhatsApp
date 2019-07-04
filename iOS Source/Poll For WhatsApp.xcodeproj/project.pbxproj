@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C5193B992297840C004846EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5193B982297840C004846EE /* LaunchScreen.storyboard */; };
-		C51CDB8C22CCB3230089BEC2 /* PollDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51CDB8B22CCB3230089BEC2 /* PollDetailViewController.swift */; };
+		C51CDB8C22CCB3230089BEC2 /* DetailPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51CDB8B22CCB3230089BEC2 /* DetailPollViewController.swift */; };
 		C51FC0C8228E7A680011574F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FC0C7228E7A680011574F /* AppDelegate.swift */; };
 		C5221E4F22971F7000BA7F40 /* PhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5221E4C22971F7000BA7F40 /* PhoneNumberViewModel.swift */; };
 		C5221E5022971F7000BA7F40 /* SendMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5221E4D22971F7000BA7F40 /* SendMessageViewModel.swift */; };
@@ -87,8 +87,10 @@
 		C5221F052297274700BA7F40 /* GothamProBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5221F012297274700BA7F40 /* GothamProBold.ttf */; };
 		C5221F072297275E00BA7F40 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5221F062297275E00BA7F40 /* StoreKit.framework */; };
 		C5221F092297283B00BA7F40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5221EF92297260A00BA7F40 /* GoogleService-Info.plist */; };
-		C585F1F322CB3B250028C863 /* PollListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F222CB3B250028C863 /* PollListViewController.swift */; };
-		C585F1F722CB625D0028C863 /* PollListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F622CB625C0028C863 /* PollListViewModel.swift */; };
+		C56C703322CE0C9700782CDA /* NewPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C703222CE0C9700782CDA /* NewPollViewController.swift */; };
+		C56C703522CE0E5700782CDA /* NewPollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C703422CE0E5600782CDA /* NewPollViewModel.swift */; };
+		C585F1F322CB3B250028C863 /* ListPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F222CB3B250028C863 /* ListPollViewController.swift */; };
+		C585F1F722CB625D0028C863 /* ListPollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F622CB625C0028C863 /* ListPollViewModel.swift */; };
 		C585F1F922CB64530028C863 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F1F822CB64530028C863 /* Poll.swift */; };
 		C585F20A22CC2D450028C863 /* PollTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C585F20822CC2D450028C863 /* PollTableViewCell.xib */; };
 		C585F20B22CC2D450028C863 /* PollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585F20922CC2D450028C863 /* PollTableViewCell.swift */; };
@@ -99,7 +101,7 @@
 		4B0D8A187DDD7C5CC789D95B /* Pods-Poll For WhatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll For WhatsApp.debug.xcconfig"; path = "Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		773EA6ED5937CBCCE5904AA3 /* Pods_Poll_For_WhatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poll_For_WhatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5193B982297840C004846EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C51CDB8B22CCB3230089BEC2 /* PollDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollDetailViewController.swift; sourceTree = "<group>"; };
+		C51CDB8B22CCB3230089BEC2 /* DetailPollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPollViewController.swift; sourceTree = "<group>"; };
 		C51FC0C4228E7A680011574F /* Poll For WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll For WhatsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51FC0C7228E7A680011574F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C51FC0D3228E7A6A0011574F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,8 +183,10 @@
 		C5221F012297274700BA7F40 /* GothamProBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProBold.ttf; sourceTree = "<group>"; };
 		C5221F062297275E00BA7F40 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5221F08229727F900BA7F40 /* Poll For WhatsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Poll For WhatsApp.entitlements"; sourceTree = "<group>"; };
-		C585F1F222CB3B250028C863 /* PollListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewController.swift; sourceTree = "<group>"; };
-		C585F1F622CB625C0028C863 /* PollListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewModel.swift; sourceTree = "<group>"; };
+		C56C703222CE0C9700782CDA /* NewPollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPollViewController.swift; sourceTree = "<group>"; };
+		C56C703422CE0E5600782CDA /* NewPollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPollViewModel.swift; sourceTree = "<group>"; };
+		C585F1F222CB3B250028C863 /* ListPollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPollViewController.swift; sourceTree = "<group>"; };
+		C585F1F622CB625C0028C863 /* ListPollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPollViewModel.swift; sourceTree = "<group>"; };
 		C585F1F822CB64530028C863 /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		C585F20822CC2D450028C863 /* PollTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollTableViewCell.xib; sourceTree = "<group>"; };
 		C585F20922CC2D450028C863 /* PollTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollTableViewCell.swift; sourceTree = "<group>"; };
@@ -259,7 +263,8 @@
 			children = (
 				C5221E4C22971F7000BA7F40 /* PhoneNumberViewModel.swift */,
 				C5221E4E22971F7000BA7F40 /* AuthenticationViewModel.swift */,
-				C585F1F622CB625C0028C863 /* PollListViewModel.swift */,
+				C585F1F622CB625C0028C863 /* ListPollViewModel.swift */,
+				C56C703422CE0E5600782CDA /* NewPollViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -561,8 +566,9 @@
 				C5221EDD22971FEB00BA7F40 /* AuthenticateViewController.swift */,
 				C5221EDE22971FEB00BA7F40 /* PhoneNumberViewController.swift */,
 				C5221EDF22971FEB00BA7F40 /* LoginViewController.swift */,
-				C585F1F222CB3B250028C863 /* PollListViewController.swift */,
-				C51CDB8B22CCB3230089BEC2 /* PollDetailViewController.swift */,
+				C585F1F222CB3B250028C863 /* ListPollViewController.swift */,
+				C51CDB8B22CCB3230089BEC2 /* DetailPollViewController.swift */,
+				C56C703222CE0C9700782CDA /* NewPollViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -760,7 +766,7 @@
 				C585F20B22CC2D450028C863 /* PollTableViewCell.swift in Sources */,
 				C5221EF522971FEC00BA7F40 /* TrueUIView.swift in Sources */,
 				C5221E5022971F7000BA7F40 /* SendMessageViewModel.swift in Sources */,
-				C585F1F722CB625D0028C863 /* PollListViewModel.swift in Sources */,
+				C585F1F722CB625D0028C863 /* ListPollViewModel.swift in Sources */,
 				C5221EC622971F9400BA7F40 /* PickerViewViewController.swift in Sources */,
 				C585F1F922CB64530028C863 /* Poll.swift in Sources */,
 				C5221EED22971FEC00BA7F40 /* AuthenticateViewController.swift in Sources */,
@@ -777,7 +783,7 @@
 				C5221EA722971F9400BA7F40 /* UIView+Extensions.swift in Sources */,
 				C5221EC722971F9400BA7F40 /* ContactsPickerViewController.swift in Sources */,
 				C5221EBA22971F9400BA7F40 /* PhoneCodeCell.swift in Sources */,
-				C51CDB8C22CCB3230089BEC2 /* PollDetailViewController.swift in Sources */,
+				C51CDB8C22CCB3230089BEC2 /* DetailPollViewController.swift in Sources */,
 				C5221EF322971FEC00BA7F40 /* UIViewController.swift in Sources */,
 				C5221EAE22971F9400BA7F40 /* UIApplication+Extensions.swift in Sources */,
 				C5221EBE22971F9400BA7F40 /* OneTextFieldViewController.swift in Sources */,
@@ -794,7 +800,8 @@
 				C5221EC822971F9400BA7F40 /* Contacts.swift in Sources */,
 				C5221EA622971F9400BA7F40 /* UIViewController+Extensions.swift in Sources */,
 				C5221EBB22971F9400BA7F40 /* CurrencyCell.swift in Sources */,
-				C585F1F322CB3B250028C863 /* PollListViewController.swift in Sources */,
+				C585F1F322CB3B250028C863 /* ListPollViewController.swift in Sources */,
+				C56C703522CE0E5700782CDA /* NewPollViewModel.swift in Sources */,
 				C5221EC222971F9400BA7F40 /* LocationPickerViewController.swift in Sources */,
 				C5221ED422971F9400BA7F40 /* SegmentedControl.swift in Sources */,
 				C5221ED522971F9400BA7F40 /* GradientSlider.swift in Sources */,
@@ -814,6 +821,7 @@
 				C5221EF022971FEC00BA7F40 /* HistoryViewController.swift in Sources */,
 				C5221ED722971F9400BA7F40 /* Button.swift in Sources */,
 				C5221EAD22971F9400BA7F40 /* UISearchBar+Extensions.swift in Sources */,
+				C56C703322CE0C9700782CDA /* NewPollViewController.swift in Sources */,
 				C5221EAB22971F9400BA7F40 /* UIColor+Extensions.swift in Sources */,
 				C5221ED322971F9400BA7F40 /* Label.swift in Sources */,
 				C5221EEF22971FEC00BA7F40 /* LoginViewController.swift in Sources */,

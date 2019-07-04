@@ -127,7 +127,7 @@ class PhoneNumberViewController: UIViewController {
             self.loadingView.alpha = 0
             self.loadingView.isHidden = false
             
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 1) {
                 self.loadingView.alpha = 1
             }
             
@@ -137,7 +137,7 @@ class PhoneNumberViewController: UIViewController {
                     
                     self.showAlert(title: "Error", message: er.localizedDescription, buttonTitles: ["OK"], highlightedButtonIndex: 0, completion: { index in
                         
-                        UIView.animate(withDuration: 0.5) {
+                        UIView.animate(withDuration: 1) {
                             self.loadingView.alpha = 0
                         }
                     })

@@ -151,7 +151,7 @@ class SendMessageViewController: UIViewController {
         self.loadingView.alpha = 0
         self.loadingView.isHidden = false
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 1) {
             self.loadingView.alpha = 1
         }
         let link1 = "https://bit.ly/2X1rKGZ"
@@ -170,7 +170,7 @@ class SendMessageViewController: UIViewController {
             
             
             DispatchQueue.main.async{
-                UIView.animate(withDuration: 0.5) {
+                UIView.animate(withDuration: 1) {
                     self.loadingView.alpha = 0
                 }
             }

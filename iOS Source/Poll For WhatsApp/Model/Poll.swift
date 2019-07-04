@@ -11,8 +11,7 @@ import Foundation
 struct Poll : Codable{
     var documentId: String?
     var title: String?
-    var pollDescription: String?
-    var creationDate: String?
+    var creationDate: Date?
     var optionList: [Option]?
     var voteCount: Int?
 }

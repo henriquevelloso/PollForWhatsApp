@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class PollListViewModel {
+class ListPollViewModel {
     
     var refreshing = false
     var userLocal: UserLocal
@@ -33,10 +33,10 @@ class PollListViewModel {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     
-                    let pollDescription = document.data()["pollDescription"] as? String
                     let title = document.data()["title"] as? String
-                    let creationDate = document.data()["creationDate"] as? String
-                    let poll = Poll(documentId: document.documentID, title: title, pollDescription: pollDescription, creationDate: creationDate, optionList: nil, voteCount: 0)
+                    let timeStamp = document.data()["creationDate"] as? Timestamp
+                    let creationDate = timeStamp?.dateValue()
+                    let poll = Poll(documentId: document.documentID, title: title, creationDate: creationDate, optionList: nil, voteCount: 0)
                     polls.append(poll)
                 }
                 
@@ -70,7 +70,9 @@ class PollListViewModel {
                                     polls[i].voteCount = votes
                                 }
                                 
-                                completionMain(polls, nil)
+                                var orderedPoll = polls.sorted(by: { $0.creationDate  > $1.creationDate})
+                                
+                                completionMain(orderedPoll, nil)
                             }
                         }
                     })

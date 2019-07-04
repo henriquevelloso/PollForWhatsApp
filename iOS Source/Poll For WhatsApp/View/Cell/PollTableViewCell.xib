@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamProBold.ttf">
+            <string>GothamPro-Bold</string>
+        </array>
+        <array key="GothamProMedium.ttf">
+            <string>GothamPro-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,13 +34,13 @@
                                 <rect key="frame" x="8" y="8" width="73.5" height="73.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-xt-djf">
-                                        <rect key="frame" x="0.0" y="15.5" width="73.5" height="27.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <rect key="frame" x="0.0" y="19.5" width="73.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="GothamPro-Bold" family="Gotham Pro" pointSize="23"/>
                                         <color key="textColor" red="0.42808221369999999" green="0.26209556919999999" blue="0.83969262570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8Z-nG-B4A">
-                                        <rect key="frame" x="0.0" y="43" width="73.5" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="39.5" width="73.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <color key="textColor" red="0.42808221369999999" green="0.26209556919999999" blue="0.83969262570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -57,7 +65,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ7-HT-rdG">
                                 <rect key="frame" x="89.5" y="8" width="225.5" height="73.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -84,8 +92,9 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.51764705882352935" green="0.56470588235294117" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HZ7-HT-rdG" secondAttribute="bottom" constant="8" id="0an-Is-oVe"/>
                             <constraint firstItem="WkU-qO-BLP" firstAttribute="centerY" secondItem="C35-4e-40f" secondAttribute="centerY" id="1Ed-mD-4LX"/>
                             <constraint firstItem="gmi-vX-LIX" firstAttribute="leading" secondItem="C35-4e-40f" secondAttribute="leading" constant="8" id="B6y-AM-uDa"/>
                             <constraint firstAttribute="trailing" secondItem="WkU-qO-BLP" secondAttribute="trailing" constant="8" id="GgC-n3-UHK"/>
@@ -94,7 +103,6 @@
                             <constraint firstItem="gmi-vX-LIX" firstAttribute="top" secondItem="C35-4e-40f" secondAttribute="top" constant="8" id="bFy-U5-nvm"/>
                             <constraint firstItem="WkU-qO-BLP" firstAttribute="leading" secondItem="HZ7-HT-rdG" secondAttribute="trailing" constant="4" id="jNo-Is-qDg"/>
                             <constraint firstItem="HZ7-HT-rdG" firstAttribute="top" secondItem="C35-4e-40f" secondAttribute="top" constant="8" id="kbj-fJ-2vD"/>
-                            <constraint firstAttribute="bottom" secondItem="HZ7-HT-rdG" secondAttribute="bottom" constant="8" id="nEG-on-ZOr"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="xq9-67-brZ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

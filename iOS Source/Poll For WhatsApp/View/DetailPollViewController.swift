@@ -1,5 +1,5 @@
 //
-//  PollDetailViewController.swift
+//  DetailPollViewController.swift
 //  Poll For WhatsApp
 //
 //  Created by Henrique Velloso on 03/07/19.
