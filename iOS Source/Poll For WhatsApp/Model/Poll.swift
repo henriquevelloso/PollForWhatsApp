@@ -16,7 +16,9 @@ struct Poll : Codable{
     var voteCount: Int?
 }
 
-struct Option : Codable{
+struct Option : Codable {
+    var prefix: String?
+    var link: String?
     var documentId: String?
     var title: String?
     var count: Int?

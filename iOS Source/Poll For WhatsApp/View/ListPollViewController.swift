@@ -20,6 +20,7 @@ class ListPollViewController: UIViewController {
     var user: UserLocal?
     var polls: [Poll]?
     let refreshControl = UIRefreshControl()
+    var selectedIndex: Int?
 
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -95,7 +96,7 @@ class ListPollViewController: UIViewController {
     
     func loadPollList() {
         
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 0.3) {
             self.loadingView.isHidden = false
             self.loadingView.alpha = 1
         }
@@ -166,6 +167,14 @@ class ListPollViewController: UIViewController {
             if let destinationVC = segue.destination as? NewPollViewController {
                 destinationVC.user = self.user
             }
+        } else if  segue.identifier == "goToPollDetail" {
+            if let destinationVC = segue.destination as? DetailPollViewController {
+                destinationVC.user = self.user
+                if let ps = self.polls {
+                    destinationVC.poll = ps[self.selectedIndex!]
+                }
+                destinationVC.isNewPoll = false
+            }
         }
         
     }
@@ -197,5 +206,12 @@ extension ListPollViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.selectedIndex = indexPath.item
+        performSegue(withIdentifier: "goToPollDetail", sender: self)
+        
     }
 }

@@ -53,9 +53,27 @@ class NewPollViewModel {
                         continue
                     }
                     
-                    var option = Option(documentId: nil, title: optionTitle, count: 0)
+                    var prefix = ""
+                    switch countIndex {
+                    case 0:
+                        prefix = "A)"
+                    case 1:
+                        prefix = "B)"
+                    case 2:
+                        prefix = "C)"
+                    case 3:
+                        prefix = "D)"
+                    case 4:
+                        prefix = "E)"
+                    case 5:
+                        prefix = "F)"
+                    default:
+                        break
+                    }
+                    
+                    var option = Option(prefix: prefix, link: nil, documentId: nil, title: optionTitle, count: 0)
                     var optionRef: DocumentReference? = nil
-                    optionRef = db.collection("users").document(self.userLocal.number!).collection("poll").document(pollRef!.documentID).collection("optionList").addDocument(data: ["title" : option.title!, "count" : 0], completion: { (errorOption) in
+                    optionRef = db.collection("users").document(self.userLocal.number!).collection("poll").document(pollRef!.documentID).collection("optionList").addDocument(data: ["title" : option.title!, "count" : 0, "prefix": option.prefix!], completion: { (errorOption) in
                         if let errOption = errorOption {
                             completionMain(nil, errOption)
                             print("Error adding document: \(errOption)")

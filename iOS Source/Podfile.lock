@@ -117,6 +117,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PieCharts (0.0.7)
   - Protobuf (3.8.0)
   - SwifterSwift (5.0.0):
     - SwifterSwift/AppKit (= 5.0.0)
@@ -147,6 +148,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Functions
   - IHKeyboardAvoiding
+  - PieCharts
   - SwifterSwift
   - SwiftyStoreKit
 
@@ -171,6 +173,7 @@ SPEC REPOS:
     - IHKeyboardAvoiding
     - leveldb-library
     - nanopb
+    - PieCharts
     - Protobuf
     - SwifterSwift
     - SwiftyStoreKit
@@ -195,10 +198,11 @@ SPEC CHECKSUMS:
   IHKeyboardAvoiding: 4cae0880c3975feffa278495df894c5166e71ad0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PieCharts: 30e50dfa7dc19e5b84e9878d32089673ef5d0453
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 1aac71cbbd4785f1a7ee69b50cff23cadb723db8
+PODFILE CHECKSUM: 1d61eafa57e7492eaa9366a1db95d848eeb72812
 
 COCOAPODS: 1.7.3

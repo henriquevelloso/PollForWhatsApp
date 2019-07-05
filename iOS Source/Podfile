@@ -11,6 +11,8 @@ target 'Poll For WhatsApp' do
   pod 'IHKeyboardAvoiding'                #https://github.com/IdleHandsApps/IHKeyboardAvoiding
   pod 'SwiftyStoreKit'                    #https://github.com/bizz84/SwiftyStoreKit
 
+  pod 'PieCharts'                        #https://github.com/i-schuetz/PieCharts
+  
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'

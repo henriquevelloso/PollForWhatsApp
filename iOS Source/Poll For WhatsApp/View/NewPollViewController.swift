@@ -121,8 +121,9 @@ class NewPollViewController: UIViewController {
             if let err = error {
                 self.showAlert(title: "Ops", message: err.localizedDescription)
             } else {
-                self.showAlert(title: "OK", message: "SALVO")
+                
                 self.newPoll = poll
+                self.performSegue(withIdentifier: "goToPollDetailNew", sender: self)
             }
             
             UIView.animate(withDuration: 1, animations: {
@@ -135,6 +136,14 @@ class NewPollViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPollDetailNew"
+        {
+            if let destinationVC = segue.destination as? DetailPollViewController {
+                destinationVC.user = self.user
+                destinationVC.poll = self.newPoll
+                destinationVC.isNewPoll = true
+            }
+        }
     }
     
 

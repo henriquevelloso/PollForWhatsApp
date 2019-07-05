@@ -154,6 +154,15 @@ class SendMessageViewController: UIViewController {
         UIView.animate(withDuration: 1) {
             self.loadingView.alpha = 1
         }
+        
+        let user = Auth.auth().currentUser!
+        var messageDic : [String] = []
+        var messageHeader01 = "_You reveived a poll message from user: \(user.phoneNumber!)_\n________________________\n\n\n"
+        var messagePollTitle02 = "*\(self.messageText.text!)*\n\n"
+        
+        
+        
+        
         let link1 = "https://bit.ly/2X1rKGZ"
         let link2 = "https://bit.ly/2X1rKGZ"
         let link3 = "https://bit.ly/2X1rKGZ"
@@ -162,7 +171,7 @@ class SendMessageViewController: UIViewController {
         let question02 = "Opção 02"
         let question03 = "Opção 03"
         
-        let user = Auth.auth().currentUser!
+//        let user = Auth.auth().currentUser!
         let fullMessage = "_You reveived a poll message from user: \(user.phoneNumber!)_\n________________________\n\n\n*\(self.messageText.text!)*\n\n1) \(question01) [\(link1)]\n\n2) \(question02) [\(link2)]\n\n3) \(question03) [\(link3)]\n________________________\n_This message was sent using the app 'Poll for WhatsApp' for iOS._"
         
         

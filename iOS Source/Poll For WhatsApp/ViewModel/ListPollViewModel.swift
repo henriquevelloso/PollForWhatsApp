@@ -54,13 +54,15 @@ class ListPollViewModel {
                                 
                                 let count = documentOption.data()["count"] as? Int
                                 let title = documentOption.data()["title"] as? String
+                                let prefix = documentOption.data()["prefix"] as? String
                                 
-                                let option = Option(documentId: documentOption.documentID, title: title, count: count)
+                                let option = Option(prefix: prefix, link: nil, documentId: documentOption.documentID, title: title, count: count)
                                 options.append(option)
                             }
                             
                             countIndex = countIndex + 1
-                            polls[index].optionList = options
+                            
+                            polls[index].optionList = options.sorted(by: { $0.prefix < $1.prefix})
                             options = [Option]()
                             if countIndex == polls.count {
                                 self.refreshing = false
@@ -70,7 +72,9 @@ class ListPollViewModel {
                                     polls[i].voteCount = votes
                                 }
                                 
-                                var orderedPoll = polls.sorted(by: { $0.creationDate  > $1.creationDate})
+                                let orderedPoll = polls.sorted(by: { $0.creationDate  > $1.creationDate})
+                                
+                                
                                 
                                 completionMain(orderedPoll, nil)
                             }

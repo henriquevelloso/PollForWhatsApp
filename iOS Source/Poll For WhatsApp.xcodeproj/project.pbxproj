@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C506212A22CE62CF00D69FF2 /* DetailPollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C506212922CE62CF00D69FF2 /* DetailPollViewModel.swift */; };
 		C5193B992297840C004846EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5193B982297840C004846EE /* LaunchScreen.storyboard */; };
 		C51CDB8C22CCB3230089BEC2 /* DetailPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51CDB8B22CCB3230089BEC2 /* DetailPollViewController.swift */; };
 		C51FC0C8228E7A680011574F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FC0C7228E7A680011574F /* AppDelegate.swift */; };
@@ -100,6 +101,7 @@
 /* Begin PBXFileReference section */
 		4B0D8A187DDD7C5CC789D95B /* Pods-Poll For WhatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll For WhatsApp.debug.xcconfig"; path = "Target Support Files/Pods-Poll For WhatsApp/Pods-Poll For WhatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		773EA6ED5937CBCCE5904AA3 /* Pods_Poll_For_WhatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poll_For_WhatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C506212922CE62CF00D69FF2 /* DetailPollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPollViewModel.swift; sourceTree = "<group>"; };
 		C5193B982297840C004846EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C51CDB8B22CCB3230089BEC2 /* DetailPollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPollViewController.swift; sourceTree = "<group>"; };
 		C51FC0C4228E7A680011574F /* Poll For WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll For WhatsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +267,7 @@
 				C5221E4E22971F7000BA7F40 /* AuthenticationViewModel.swift */,
 				C585F1F622CB625C0028C863 /* ListPollViewModel.swift */,
 				C56C703422CE0E5600782CDA /* NewPollViewModel.swift */,
+				C506212922CE62CF00D69FF2 /* DetailPollViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 				C5221EEE22971FEC00BA7F40 /* PhoneNumberViewController.swift in Sources */,
 				C5221EA422971F9400BA7F40 /* UISegmentedControl+Extensions.swift in Sources */,
 				C5221EC822971F9400BA7F40 /* Contacts.swift in Sources */,
+				C506212A22CE62CF00D69FF2 /* DetailPollViewModel.swift in Sources */,
 				C5221EA622971F9400BA7F40 /* UIViewController+Extensions.swift in Sources */,
 				C5221EBB22971F9400BA7F40 /* CurrencyCell.swift in Sources */,
 				C585F1F322CB3B250028C863 /* ListPollViewController.swift in Sources */,
