@@ -28,7 +28,9 @@ class AuthenticationViewModel {
                 completion(nil, error)
             }
             
-            let user = UserLocal(userId: authResult?.user.uid, number: authResult?.user.phoneNumber, countryCode: userLocal.countryCode, verificationID: verificationID, authenticationCode: verificationCode)
+            let phoneNumber = authResult?.user.phoneNumber?.removingPrefix("+")
+            
+            let user = UserLocal(userId: authResult?.user.uid, number: phoneNumber, countryCode: userLocal.countryCode, verificationID: verificationID, authenticationCode: verificationCode)
             
             let db = Firestore.firestore()
             let ref = db.collection("users").document(user.number!)

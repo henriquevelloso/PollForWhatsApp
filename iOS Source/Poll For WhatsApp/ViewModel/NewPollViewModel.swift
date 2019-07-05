@@ -40,7 +40,7 @@ class NewPollViewModel {
                 poll.documentId = pollRef!.documentID
                 
                 var countIndex = 0
-                for optionTitle in pollOptions {
+                for (index, optionTitle) in pollOptions.enumerated() {
                     
                     if optionTitle == nil || optionTitle == ""{
                         
@@ -54,7 +54,7 @@ class NewPollViewModel {
                     }
                     
                     var prefix = ""
-                    switch countIndex {
+                    switch index {
                     case 0:
                         prefix = "A)"
                     case 1:

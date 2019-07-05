@@ -30,6 +30,11 @@ class ListPollViewModel {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                
+                if querySnapshot!.documents.count == 0 {
+                    completionMain(nil, nil)
+                }
+                
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     

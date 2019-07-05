@@ -84,7 +84,10 @@ class ListPollViewController: UIViewController {
         if let user = self.user {
             self.viewModel = ListPollViewModel(userLocal: user)
         } else {
-            self.user = UserLocal(userId: nil, number: Auth.auth().currentUser?.phoneNumber, countryCode: nil, verificationID: nil, authenticationCode: nil)
+            
+            let phoneNumber = Auth.auth().currentUser?.phoneNumber?.removingPrefix("+")
+            
+            self.user = UserLocal(userId: nil, number: phoneNumber, countryCode: nil, verificationID: nil, authenticationCode: nil)
             self.viewModel = ListPollViewModel(userLocal: self.user!)
         }
     }
@@ -103,24 +106,24 @@ class ListPollViewController: UIViewController {
         }
         
         self.viewModel?.pollListRetrieveData(completionMain: { (polls, error) in
-            
+
             self.polls = polls
             self.tableView.reloadData()
-            
+
             UIView.animate(withDuration: 0.3, animations: {
                 self.loadingView.alpha = 0
                 self.tableView.alpha = 1
                 self.newPollButton.alpha = 1
             }, completion: { _ in
-                
+
                 self.loadingView.isHidden = false
                 self.refreshControl.endRefreshing()
             })
-            
+
             if let err = error {
                 self.showAlert(title: "Error", message: err.localizedDescription)
             }
-            
+
         })
     }
     
