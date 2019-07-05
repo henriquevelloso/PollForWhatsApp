@@ -47,7 +47,8 @@ class ListPollViewController: UIViewController {
         
         self.loaderIndicator.isHidden = false
         self.loaderIndicator.startAnimating()
-        self.newPollButton.alpha = 0
+//        self.newPollButton.alpha = 0
+//        self.tableView.alpha = 0
         self.loadPollList()
         
     }
@@ -106,7 +107,7 @@ class ListPollViewController: UIViewController {
             self.polls = polls
             self.tableView.reloadData()
             
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.loadingView.alpha = 0
                 self.tableView.alpha = 1
                 self.newPollButton.alpha = 1

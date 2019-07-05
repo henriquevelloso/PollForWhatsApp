@@ -8,6 +8,7 @@
 
 import UIKit
 import PieCharts
+import Firebase
 
 class DetailPollViewController: UIViewController {
 
@@ -22,6 +23,9 @@ class DetailPollViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var fontDefaultToGraph: UILabel!
     @IBOutlet weak var chartsCountainer: TrueUIView!
+    @IBOutlet weak var spacer: UIView!
+    @IBOutlet weak var deleteButton: TrueUIButton!
+    @IBOutlet weak var okButton: TrueUIButton!
     
     @IBOutlet weak var chartView: PieChart!
     
@@ -64,6 +68,22 @@ class DetailPollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadScreen()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if self.isNewPoll {
+            self.navigationItem.setHidesBackButton(true, animated:false)
+            self.spacer.isHidden = true
+            self.deleteButton.isHidden = true
+            self.okButton.isHidden = false
+        } else {
+            self.navigationItem.setHidesBackButton(false, animated:false)
+            self.spacer.isHidden = false
+            self.deleteButton.isHidden = false
+            self.okButton.isHidden = true
+        }
     }
     
     //MARK: - Custom functions
@@ -235,6 +255,34 @@ class DetailPollViewController: UIViewController {
     
     // MARK: - Actions
 
+    @IBAction func deletePollAction(_ sender: Any) {
+        
+        self.showAlert(title: "WARNING", message: "Do you really want to delete this poll?", buttonTitles: ["Cancel","YES!"], highlightedButtonIndex: 0) { (index) in
+            if index == 1 {
+                UIView.animate(withDuration: 1, animations: {
+                        self.loadingView.alpha = 1
+                })
+                
+                let db = Firestore.firestore()
+                db.collection("users").document(self.user!.number!).collection("poll").document(self.poll!.documentId!).delete() { err in
+                    if let err = err {
+                        print("Error removing document: \(err)")
+                        UIView.animate(withDuration: 1, animations: {
+                            self.loadingView.alpha = 0
+                            self.showAlert(title: "Ops", message: err.localizedDescription)
+                        })
+                    } else {
+                        print("Document successfully removed!")
+                        
+                        self.navigationController?.popViewController()
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    
     @IBAction func sharePollButton(_ sender: UIButton) {
         
         // text to share
@@ -252,6 +300,10 @@ class DetailPollViewController: UIViewController {
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
         
+    }
+    
+    @IBAction func goToListAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToList", sender: self)
     }
     
     // MARK: - Navigation
