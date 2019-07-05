@@ -21,12 +21,16 @@ class DetailPollViewController: UIViewController {
     var chartList: [PieSliceModel] = []
     
     //MARK: - Outlets
+    @IBOutlet weak var stackGeral: UIStackView!
     @IBOutlet weak var fontDefaultToGraph: UILabel!
     @IBOutlet weak var chartsCountainer: TrueUIView!
     @IBOutlet weak var spacer: UIView!
     @IBOutlet weak var deleteButton: TrueUIButton!
     @IBOutlet weak var okButton: TrueUIButton!
     
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var shareResultButton: TrueUIButton!
+    @IBOutlet weak var sendButton: TrueUIButton!
     @IBOutlet weak var chartView: PieChart!
     
     @IBOutlet weak var loadingView: UIView!
@@ -78,11 +82,13 @@ class DetailPollViewController: UIViewController {
             self.spacer.isHidden = true
             self.deleteButton.isHidden = true
             self.okButton.isHidden = false
+            self.shareResultButton.isHidden = true
         } else {
             self.navigationItem.setHidesBackButton(false, animated:false)
             self.spacer.isHidden = false
             self.deleteButton.isHidden = false
             self.okButton.isHidden = true
+            self.shareResultButton.isHidden = false
         }
     }
     
@@ -225,13 +231,13 @@ class DetailPollViewController: UIViewController {
     
     func createLinks() {
         
-        let linkRaw = "https://us-central1-poll-for-whatsapp.cloudfunctions.net/pollApi?"
+        let linkRaw = "https://us-central1-poll-for-whatsapp.cloudfunctions.net/PollAPI"
 
         if let pollLocal = self.poll  {
             var optionList: [Option] = []
             for option in pollLocal.optionList! {
                 var opt = option
-                opt.link = "\(linkRaw)user=\(self.user!.number!)&option=\(option.documentId!)"
+                opt.link = "\(linkRaw)?userID=\(self.user!.number!)&pollID=\(pollLocal.documentId!)&optionID=\(option.documentId!)"
                 optionList.append(opt)
             }
             self.poll?.optionList = optionList
@@ -322,6 +328,36 @@ class DetailPollViewController: UIViewController {
         performSegue(withIdentifier: "goToList", sender: self)
     }
     
+    @IBAction func printButton(sender: Any) {
+        UIView.animate(withDuration: 0.5) {
+            self.loadingView.alpha = 1
+            self.deleteButton.isHidden = true
+            self.shareResultButton.isHidden = true
+            self.okButton.isHidden = true
+            self.sendButton.isHidden = true
+            self.spacer.isHidden = true
+            
+        }
+        
+        let activityItem: [AnyObject] = [self.contentView.toImage() as AnyObject]
+        
+        let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        activityViewController.setValue("WhatsApp", forKey: "subject")
+        activityViewController.excludedActivityTypes = [.airDrop, .print, .assignToContact, .saveToCameraRoll, .addToReadingList, .postToFlickr, .postToVimeo, .postToFacebook, .message, .postToWeibo, .mail, .openInIBooks, .addToReadingList, .postToLinkedIn, .addToiCloudDrive, .postToXing, UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"), UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension")]
+        
+//        self.present(activityViewController, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: {
+            self.deleteButton.isHidden = false
+            self.shareResultButton.isHidden = false
+            self.okButton.isHidden = false
+            self.sendButton.isHidden = false
+            self.spacer.isHidden = false
+            self.loadingView.alpha = 0
+        })
+
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
@@ -335,4 +371,19 @@ extension DetailPollViewController: PieChartDelegate {
     }
     
     
+}
+
+
+
+//create an extension to covert the view to an image
+extension UIView {
+    func toImage() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+        
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
 }

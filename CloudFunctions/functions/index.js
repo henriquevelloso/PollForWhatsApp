@@ -23,17 +23,21 @@ var firestore = admin.firestore();
 
 exports.PollAPI = functions.https.onRequest(async (request, response) => {
 
-    const userID = '5551995512009' //request.query.userID;
-    const pollID = 'DOjpM5GzUzQFQxuVypxU' //request.query.pollID;
-    const optionID = 'WCjQn5t4M5Uvpu9Kmrj9'
+    const userID = request.query.userID;
+    const pollID = request.query.pollID;
+    const optionID = request.query.optionID;
+
+    console.log('userID', userID);
+    console.log('pollID', pollID);
+    console.log('optionID', optionID);
 
     var option = await admin.firestore().collection('users').doc(userID).collection('poll').doc(pollID).collection('optionList').doc(optionID);
 
-    option.update({
+    await option.update({
         count: admin.firestore.FieldValue.increment(1)
     });
 
-    response.json({result: option.data})
+    response.redirect('whatsapp://');
 
 });
 
