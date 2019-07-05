@@ -223,13 +223,29 @@ class DetailPollViewController: UIViewController {
         chartView.layers = [ textLineLayer]
     }
     
+    func createLinks() {
+        
+        let linkRaw = "https://us-central1-poll-for-whatsapp.cloudfunctions.net/pollApi?"
+
+        if let pollLocal = self.poll  {
+            var optionList: [Option] = []
+            for option in pollLocal.optionList! {
+                var opt = option
+                opt.link = "\(linkRaw)user=\(self.user!.number!)&option=\(option.documentId!)"
+                optionList.append(opt)
+            }
+            self.poll?.optionList = optionList
+        }
+        
+    }
+    
     func prepateContentToShare() -> String {
-        let linkRaw = "https://us-central1-poll-for-whatsapp.cloudfunctions.net/pollApi"
-        let linkAppstore = "http://apple.com"
+
+        self.createLinks()
+        let linkAppstore = "http://appstore.com"
         var messageDic : String = ""
         
         if let pollLocal = self.poll  {
-            
             
             let messageHeader01 = "_You reveived a poll message from user: \(self.user!.number!)_\n________________________\n\n\n"
             let messagePollTitle02 = "*\(pollLocal.title!)*\n\n"
