@@ -73,9 +73,11 @@ class DetailPollViewController: UIViewController {
         super.viewDidLoad()
         self.loadScreen()
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.shareResultButton.isHidden = true
         
         if self.isNewPoll {
             self.navigationItem.setHidesBackButton(true, animated:false)
@@ -88,7 +90,9 @@ class DetailPollViewController: UIViewController {
             self.spacer.isHidden = false
             self.deleteButton.isHidden = false
             self.okButton.isHidden = true
-            self.shareResultButton.isHidden = false
+            if self.poll?.voteCount > 0 {
+                self.shareResultButton.isHidden = false
+            }
         }
     }
     
@@ -229,49 +233,106 @@ class DetailPollViewController: UIViewController {
         chartView.layers = [ textLineLayer]
     }
     
-    func createLinks() {
+    func createShortLink(urlRaw: String, completionMain: @escaping (URL?, Error?) -> Void){
+        
+        guard let link = URL(string: urlRaw) else {
+            completionMain(nil, nil)
+            return
+        }
+        
+        let dynamicLinksDomainURIPrefix = "https://pollforwhatsapp.page.link"
+        let linkBuilder = DynamicLinkComponents(link: link, domainURIPrefix: dynamicLinksDomainURIPrefix)
+        linkBuilder?.options = DynamicLinkComponentsOptions()
+        linkBuilder?.options?.pathLength = .short
+        linkBuilder?.shorten() { url, warnings, error in
+            if error != nil {
+                print("Error no short url")
+                return
+            } else {
+                print("The short URL is: \(url)")
+                completionMain(url, nil)
+            }
+        }
+    }
+    
+    func createLinks(completionMain: @escaping ([Option], Error?) -> Void){
         
         let linkRaw = "https://us-central1-poll-for-whatsapp.cloudfunctions.net/PollAPI"
-
         if let pollLocal = self.poll  {
             var optionList: [Option] = []
-            for option in pollLocal.optionList! {
-                var opt = option
-                opt.link = "\(linkRaw)?userID=\(self.user!.number!)&pollID=\(pollLocal.documentId!)&optionID=\(option.documentId!)"
-                optionList.append(opt)
+            
+            var countIndex = 0
+            for (index, option) in pollLocal.optionList!.enumerated() {
+                
+                let link = "\(linkRaw)?userID=\(self.user!.number!)&pollID=\(pollLocal.documentId!)&optionID=\(option.documentId!)"
+                self.createShortLink(urlRaw: link) { (url, error) in
+                    if let err = error {
+                        print(err.localizedDescription)
+                        self.showAlert(title: "Ops", message: err.localizedDescription)
+                    } else {
+                        var opt = option
+                        opt.link = url?.absoluteString.removingPrefix("https://")
+                        optionList.append(opt)
+                       
+                        countIndex = countIndex + 1
+                        if countIndex == pollLocal.optionList!.count {
+                            
+                            self.poll?.optionList = optionList
+                            completionMain(optionList, nil)
+                        }
+                    }
+                }
             }
-            self.poll?.optionList = optionList
+            
         }
         
     }
     
-    func prepateContentToShare() -> String {
+    func prepateContentToShare() {
 
-        self.createLinks()
-        let linkAppstore = "http://appstore.com"
-        var messageDic : String = ""
-        
-        if let pollLocal = self.poll  {
+        self.createLinks { optionList, err in
             
-            let messageHeader01 = "_You reveived a poll message from user: \(self.user!.number!)_\n________________________\n\n\n"
-            let messagePollTitle02 = "*\(pollLocal.title!)*\n\n"
-            let messageFooter04 = "\n________________________\n_This message was sent using the app 'Poll for WhatsApp' for iOS._"
-            let messageFooter05 = "\n\(linkAppstore)"
+            let linkAppstore = "apple.co/2LgEbwcL"
+            var messageDic : String = ""
             
-            var messageOption03 = ""
-            for option in pollLocal.optionList! {
-                messageOption03 = messageOption03 + "*\(option.prefix ?? "")* \(option.title ?? "") [\(option.link ?? "")]\n\n"
+            var list: [Option] = []
+            for item in optionList {
+                list.append(item)
             }
             
-            messageDic.append(contentsOf: messageHeader01)
-            messageDic.append(contentsOf: messagePollTitle02)
-            messageDic.append(contentsOf: messageOption03)
-            messageDic.append(contentsOf: messageFooter04)
-            messageDic.append(contentsOf: messageFooter05)
+            var listSorted = list.sorted(by: {$0.prefix < $1.prefix})
+            if let pollLocal = self.poll  {
+                
+                let messageHeader01 = "_You reveived a poll message from user: +\(self.user!.number!)_\n________________________\n\n"
+                let messagePollTitle02 = "*\(pollLocal.title!)*\n\n"
+                let messageFooter04 = "\n________________________\n_This message was sent using the app 'Poll for WhatsApp' for iOS._"
+                let messageFooter05 = "\n\(linkAppstore)"
+                
+                var messageOption03 = ""
+                for option in listSorted {
+                    messageOption03 = messageOption03 + "*\(option.prefix ?? "")* \(option.title ?? "") \n\(option.link ?? "")\n\n"
+                }
+                
+                messageDic.append(contentsOf: messageHeader01)
+                messageDic.append(contentsOf: messagePollTitle02)
+                messageDic.append(contentsOf: messageOption03)
+                messageDic.append(contentsOf: messageFooter04)
+                messageDic.append(contentsOf: messageFooter05)
+            }
+        
+            // set up activity view controller
+            let textToShare = [ messageDic ]
+            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+            activityViewController.setValue("WhatsApp", forKey: "subject")
+            // exclude some activity types from the list (optional)
+            
+            //  activityViewController.excludedActivityTypes = [.airDrop, .print, .assignToContact, .saveToCameraRoll, .addToReadingList, .postToFlickr, .postToVimeo, .postToFacebook, .message, .postToWeibo, .mail, .openInIBooks, .addToReadingList, .postToLinkedIn, .addToiCloudDrive, .postToXing, UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"), UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension")]
+            
+            // present the view controller
+            self.loadingView.alpha = 0
+            self.present(activityViewController, animated: true, completion: nil)
         }
-        
-        return messageDic
-        
     }
     
     
@@ -307,20 +368,22 @@ class DetailPollViewController: UIViewController {
     
     @IBAction func sharePollButton(_ sender: UIButton) {
         
+        self.loadingView.alpha = 1
+        
         // text to share
-        let text = self.prepateContentToShare()
-        
-        // set up activity view controller
-        let textToShare = [ text ]
-        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
-        activityViewController.setValue("WhatsApp", forKey: "subject")
-        // exclude some activity types from the list (optional)
-        
-        activityViewController.excludedActivityTypes = [.airDrop, .print, .assignToContact, .saveToCameraRoll, .addToReadingList, .postToFlickr, .postToVimeo, .postToFacebook, .message, .postToWeibo, .mail, .openInIBooks, .addToReadingList, .postToLinkedIn, .addToiCloudDrive, .postToXing, UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"), UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension")]
-        
-        // present the view controller
-        self.present(activityViewController, animated: true, completion: nil)
+         self.prepateContentToShare()
+//
+//        // set up activity view controller
+//        let textToShare = [ text ]
+//        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+//        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+//        activityViewController.setValue("WhatsApp", forKey: "subject")
+//        // exclude some activity types from the list (optional)
+//
+//      //  activityViewController.excludedActivityTypes = [.airDrop, .print, .assignToContact, .saveToCameraRoll, .addToReadingList, .postToFlickr, .postToVimeo, .postToFacebook, .message, .postToWeibo, .mail, .openInIBooks, .addToReadingList, .postToLinkedIn, .addToiCloudDrive, .postToXing, UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"), UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension")]
+//
+//        // present the view controller
+//        self.present(activityViewController, animated: true, completion: nil)
         
     }
     
@@ -331,28 +394,26 @@ class DetailPollViewController: UIViewController {
     @IBAction func printButton(sender: Any) {
         UIView.animate(withDuration: 0.5) {
             self.loadingView.alpha = 1
-            self.deleteButton.isHidden = true
-            self.shareResultButton.isHidden = true
-            self.okButton.isHidden = true
-            self.sendButton.isHidden = true
-            self.spacer.isHidden = true
+//            self.deleteButton.isHidden = true
+//            self.shareResultButton.isHidden = true
+//            self.sendButton.isHidden = true
+//            self.spacer.isHidden = true
             
         }
         
-        let activityItem: [AnyObject] = [self.contentView.toImage() as AnyObject]
+        let activityItem: [AnyObject] = [self.chartsCountainer.toImage() as AnyObject]
         
         let activityViewController = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         activityViewController.setValue("WhatsApp", forKey: "subject")
-        activityViewController.excludedActivityTypes = [.airDrop, .print, .assignToContact, .saveToCameraRoll, .addToReadingList, .postToFlickr, .postToVimeo, .postToFacebook, .message, .postToWeibo, .mail, .openInIBooks, .addToReadingList, .postToLinkedIn, .addToiCloudDrive, .postToXing, UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"), UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension")]
+        //activityViewController.excludedActivityTypes = [.airDrop, .print, .assignToContact, .saveToCameraRoll, .addToReadingList, .postToFlickr, .postToVimeo, .postToFacebook, .message, .postToWeibo, .mail, .openInIBooks, .addToReadingList, .postToLinkedIn, .addToiCloudDrive, .postToXing, UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"), UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension")]
         
 //        self.present(activityViewController, animated: true, completion: nil)
         self.present(activityViewController, animated: true, completion: {
-            self.deleteButton.isHidden = false
-            self.shareResultButton.isHidden = false
-            self.okButton.isHidden = false
-            self.sendButton.isHidden = false
-            self.spacer.isHidden = false
+//            self.deleteButton.isHidden = false
+//            self.shareResultButton.isHidden = false
+//            self.sendButton.isHidden = false
+//            self.spacer.isHidden = false
             self.loadingView.alpha = 0
         })
 

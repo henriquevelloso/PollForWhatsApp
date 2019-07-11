@@ -18,5 +18,6 @@ target 'Poll For WhatsApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Functions'
+  pod 'Firebase/DynamicLinks'
   
 end

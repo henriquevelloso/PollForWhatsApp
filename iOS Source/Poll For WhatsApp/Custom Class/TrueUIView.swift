@@ -66,6 +66,25 @@ class TrueUIView: UIView {
             gradientLayer.cornerRadius = layer.cornerRadius
             
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+            gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
+            gradientLayer.locations = [0.0, 0.0]
+            
+            layer.insertSublayer(gradientLayer, at: 0)
+        } else {
+            gradientLayer.removeFromSuperlayer()
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if let leftGradientColor = leftGradientColor, let rightGradientColor = rightGradientColor {
+            gradientLayer.frame = bounds
+            gradientLayer.colors = [leftGradientColor.cgColor, rightGradientColor.cgColor]
+            gradientLayer.borderColor = layer.borderColor
+            gradientLayer.borderWidth = layer.borderWidth
+            gradientLayer.cornerRadius = layer.cornerRadius
+            
+            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
             gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
             gradientLayer.locations = [0.0, 1.0]
             

@@ -21,7 +21,7 @@ class ListPollViewController: UIViewController {
     var polls: [Poll]?
     let refreshControl = UIRefreshControl()
     var selectedIndex: Int?
-
+    
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
@@ -47,8 +47,8 @@ class ListPollViewController: UIViewController {
         
         self.loaderIndicator.isHidden = false
         self.loaderIndicator.startAnimating()
-//        self.newPollButton.alpha = 0
-//        self.tableView.alpha = 0
+        //        self.newPollButton.alpha = 0
+        //        self.tableView.alpha = 0
         self.loadPollList()
         
     }
@@ -106,24 +106,24 @@ class ListPollViewController: UIViewController {
         }
         
         self.viewModel?.pollListRetrieveData(completionMain: { (polls, error) in
-
+            
             self.polls = polls
             self.tableView.reloadData()
-
+            
             UIView.animate(withDuration: 0.3, animations: {
                 self.loadingView.alpha = 0
                 self.tableView.alpha = 1
                 self.newPollButton.alpha = 1
             }, completion: { _ in
-
+                
                 self.loadingView.isHidden = false
                 self.refreshControl.endRefreshing()
             })
-
+            
             if let err = error {
                 self.showAlert(title: "Error", message: err.localizedDescription)
             }
-
+            
         })
     }
     
@@ -151,8 +151,8 @@ class ListPollViewController: UIViewController {
         self.refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
         refreshControl.tintColor = UIColor.white
         self.refreshControl.attributedTitle = NSAttributedString(string: "Loading...", attributes: [.foregroundColor: UIColor.white])
-
-
+        
+        
     }
     
     
@@ -162,10 +162,10 @@ class ListPollViewController: UIViewController {
         performSegue(withIdentifier: "goToNewPoll", sender: self)
     }
     
-
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
         if segue.identifier == "goToNewPoll"
         {
             if let destinationVC = segue.destination as? NewPollViewController {
@@ -182,7 +182,7 @@ class ListPollViewController: UIViewController {
         }
         
     }
-
+    
 }
 
 // MARK: - TableView delegates

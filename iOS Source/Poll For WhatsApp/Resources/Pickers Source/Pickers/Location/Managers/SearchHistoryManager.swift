@@ -53,17 +53,25 @@ extension CLLocationCoordinate2D {
 extension Location {
     
 	func toDefaultsDic() -> NSDictionary? {
-		guard let postalAddress = placemark.postalAddress,
-			let placemarkCoordinatesDic = placemark.location?.coordinate.toDefaultsDic()
+		guard let placemarkCoordinatesDic = placemark.location?.coordinate.toDefaultsDic()
 			else { return nil }
+        
+        if #available(iOS 11.0, *) {
+            guard let postalAddress = placemark.postalAddress
+                else { return nil }
+        } else {
+            // Fallback on earlier versions
+        }
 		
         let formatter = CNPostalAddressFormatter()
-        let addressDic = formatter.string(from: postalAddress)
+         
+             let addressDic = ""
         
 		var dic: [String: AnyObject] = [
 			LocationDicKeys.locationCoordinates: location.coordinate.toDefaultsDic(),
-			LocationDicKeys.placemarkAddressDic: addressDic as AnyObject,
+            LocationDicKeys.placemarkAddressDic: addressDic as AnyObject,
 			LocationDicKeys.placemarkCoordinates: placemarkCoordinatesDic
+            
 		]
 		if let name = name { dic[LocationDicKeys.name] = name as AnyObject? }
 		return dic as NSDictionary?
