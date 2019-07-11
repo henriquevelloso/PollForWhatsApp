@@ -292,7 +292,7 @@ class DetailPollViewController: UIViewController {
 
         self.createLinks { optionList, err in
             
-            let linkAppstore = "apple.co/2LgEbwcL"
+            let linkAppstore = "pollforwhatsapp.page.link/DOWNLOAD"
             var messageDic : String = ""
             
             var list: [Option] = []
@@ -300,24 +300,27 @@ class DetailPollViewController: UIViewController {
                 list.append(item)
             }
             
-            var listSorted = list.sorted(by: {$0.prefix < $1.prefix})
+            let listSorted = list.sorted(by: {$0.prefix < $1.prefix})
             if let pollLocal = self.poll  {
                 
-                let messageHeader01 = "_You reveived a poll message from user: +\(self.user!.number!)_\n________________________\n\n"
-                let messagePollTitle02 = "*\(pollLocal.title!)*\n\n"
-                let messageFooter04 = "\n________________________\n_This message was sent using the app 'Poll for WhatsApp' for iOS._"
-                let messageFooter05 = "\n\(linkAppstore)"
-                
+                let messageLink01 = "\(linkAppstore)\n_________________________\n\n\n"
+                let messagePollTitle02 = "*\(pollLocal.title!)*\n\n\n"
                 var messageOption03 = ""
                 for option in listSorted {
                     messageOption03 = messageOption03 + "*\(option.prefix ?? "")* \(option.title ?? "") \n\(option.link ?? "")\n\n"
                 }
+                let messageLine04 = "\n________________________\n"
+                let messageFromUser05 = "_You reveived this poll from +\(self.user!.number!)_\n"
+                let messageFooter06 = "_This message was sent using the app 'Poll for WhatsApp' for iOS._"
                 
-                messageDic.append(contentsOf: messageHeader01)
+                
+                messageDic.append(contentsOf: messageLink01)
                 messageDic.append(contentsOf: messagePollTitle02)
                 messageDic.append(contentsOf: messageOption03)
-                messageDic.append(contentsOf: messageFooter04)
-                messageDic.append(contentsOf: messageFooter05)
+                messageDic.append(contentsOf: messageLine04)
+                messageDic.append(contentsOf: messageFromUser05)
+                messageDic.append(contentsOf: messageFooter06)
+
             }
         
             // set up activity view controller

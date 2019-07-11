@@ -33,6 +33,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Save generated poll results</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
